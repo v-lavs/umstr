@@ -1,0 +1,31 @@
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  color: $white;
+  border-radius: 8px;
+  border: 2px solid $white;
+  padding: 5px 24px 9px;
+  transition: background .35s;
+  line-height: 1.1;
+  font-family: $primary-font;
+
+  &_main {
+    background-image: linear-gradient(to right, #00f5ff, #009aff);
+    box-shadow: 0 0 27px rgba(28, 29, 30, 0.15);
+    border: 3px solid #ffffff;
+    border-radius: 25px;
+    &:hover,
+    &:focus{
+      background-image: linear-gradient(to right, #009aff, #00f5ff);
+    }
+  }
+
+  &_banner {
+    display: block;
+    font-size: 35px;
+    background-color: transparent;
+  }
+}
+

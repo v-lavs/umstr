@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>umstr</title>
+
+    <meta name="robots" content="noindex"/>
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!--styles-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="build/main.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <button class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <a href="/" class="main-logo">
+                <img src="assets/img/logo-site.png" alt="УмаСтар" class="img img-logo">
+            </a>
+
+            <nav class="main-nav">
+                <button class="btn-close">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                         viewBox="0 0 20 20">
+                        <title>close</title>
+                        <path d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
+                    </svg>
+                </button>
+
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="/" class="menu__link">Про УмаСтар</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Показання</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Запитання</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Де купити</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Контакти</a>
+                    </li>
+                </ul>
+
+                <div class="lang-switch">
+                    <a href="#" class="active-lang">UA</a>
+                    <a href="#">RU</a>
+                </div>
+            </nav>
+            <a href="#" class="logo">
+                <img src="assets/img/logo.png" alt="Arterium" class="img img-logo">
+            </a>
+
+            <div class="backdrop"></div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section-banner">
+            <div class="container">
+                <div class="top-content">
+                    <div class="banner-part">
+                        <p class="slogan">УмаСтар<br><span class="banner-text">… і ваші очі сяють!</span></p>
+                        <a href="#" class="btn btn_banner">де купити</a>
+                    </div>
+                    <div class="banner-part wrap-banner-bg" style="background-image: url(assets/img/banner1.jpg);">
+                    </div>
+                    <div class="banner-part wrap-banner-bg" style="background-image: url(assets/img/banner2.jpg);">
+                    </div>
+                </div>
+                <div class="bottom-content">
+                    <div class="part part_left">
+                        <a href="#" class="link-banner">де купити</a>
+                    </div>
+                    <div class="part part_right">
+                        <a href="#" class="link-banner ">
+                            <div class="wrap-icon" style="background-image: url(assets/img/info.png);"></div>
+                            <span>Інструкція</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-about">
+            <div class="container">
+                <h2 class="section__title">Про УмаСтар</h2>
+                <div class="section__sub-title">
+                    УмаСтар - це замінник сліз, що використовується
+                    для захисту, зволоження та змащення поверхні ока
+                </div>
+
+                <div class="block-preserve">
+                    <div class="wrap-img">
+                        <img src="" alt="" class="img">
+                    </div>
+                    <p class="color-blue">
+                        Після відкриття флакону можна зберігати до 90 днів
+                    </p>
+                </div>
+                <div class="section__text">
+                    <p>
+                        До складу очних крапель УмаСтар входять 2 компоненти: 0,15% поперечно
+                        зшита гіалуронова кислота і 0,3% карбоксиметил β-глюкан.
+                        Поперечно зшита гіалуронова кислота має переваги над звичайною
+                        (лінійною) гіалуроновою кислотою: вона стійкіша і тому не руйнується
+                        ферментами тканин. Карбоксиметил β-глюкан має антиоксидантні
+                        властивості та захищає око від вільних радикалів.
+                    </p>
+                </div>
+                <div class="advantages swiper-container" id="advantagesSlider">
+                    <div class="swiper-wrapper">
+                        <div class="advantages-card swiper-slide">
+
+                            <h3 class="advantages-card__title">Ефективний</h3>
+
+                            <div class="advantages-card__wrap-icon"
+                                 style="background-image: url(assets/img/humidification.png);"></div>
+                            <div class="advantages-card__body">
+                                <p>Зволожує поверхню ока
+                                    Інактивує вільні радикали</p>
+                            </div>
+                        </div>
+                        <div class="advantages-card swiper-slide">
+
+                            <h3 class="advantages-card__title">Зручний</h3>
+
+                            <div class="advantages-card__wrap-icon"
+                                 style="background-image: url(assets/img/compatibility.png);"></div>
+                            <div class="advantages-card__body">
+
+                                <p>Сумісний з контактними лінзами</p>
+                            </div>
+                        </div>
+                        <div class="advantages-card swiper-slide">
+
+                            <h3 class="advantages-card__title">Безпечний</h3>
+
+                            <div class="advantages-card__wrap-icon"
+                                 style="background-image: url(assets/img/shield.png);"></div>
+                            <div class="advantages-card__body">
+                                <p>Без консервантів</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-indication">
+            <div class="container">
+                <div class="content-block">
+                    <h2 class="section__title">Показання</h2>
+                    <div class="section__sub-title">
+                        УмаСтар слід застосовувати, якщо у вас є відчуття сухості,
+                        дискомфорту або чужорідного тіла в очах в наслідок:
+                    </div>
+
+                    <div class="block-bg">
+                        <div class="wrap-img">
+                            <img src="" alt="" class="img">
+                        </div>
+                    </div>
+                    <div class="dynamic-content">
+                        <ul class="indications">
+                            <li class="indications__item">Перевантаження органу зору
+                                при роботі з монітором;
+                            </li>
+                            <li class="indications__item"> Екологічного стресу для очей
+                                (кондиційоване повітря,
+                                сигаретний дим, вітер тощо);
+                            </li>
+                            <li class="indications__item"> Використання контактних лінз;
+                            </li>
+                            <li class="indications__item">При системних захворіннях та
+                                гормональних порушеннях,
+                                що можуть призводити
+                                дорозвитку «сухого ока».
+                            </li>
+                            <li class="indications__item">
+                                При прийомі деяких медикаментів,
+                                що можуть викликати
+                                Сухість ока (антидепресантів,
+                                бета-блокаторів тощо).
+                            </li>
+                        </ul>
+                    </div>
+                    <h3 class="title">Як застосовувати УмаСтар?</h3>
+                    <ul class="how-apply">
+                        <li class="how-apply-card">
+                            <div class="how-apply-card__wrap-icon"
+                                 style="background-image: url(assets/img/hand.png);">
+                            </div>
+                            <div class="how-apply-card__body">
+                                <p>Перед
+                                    застосуванням
+                                    слід вимити
+                                    руки</p>
+                            </div>
+                        </li>
+                        <li class="how-apply-card">
+
+                            <div class="how-apply-card__wrap-icon"
+                                 style="background-image: url(assets/img/dropper.png);">
+                            </div>
+                            <div class="how-apply-card__body">
+
+                                <p>Переконайтеся,
+                                    що крапельниця
+                                    не контактує
+                                    з оком</p>
+                            </div>
+                        </li>
+                        <li class="how-apply-card">
+                            <div class="how-apply-card__wrap-icon"
+                                 style="background-image: url(assets/img/eye.png);">
+                            </div>
+                            <div class="how-apply-card__body">
+                                <p>Закапувати по 1-2 каплі в кожне око 2-3 рази на день</p>
+                            </div>
+                        </li>
+                        <li class="how-apply-card">
+                            <div class="how-apply-card__wrap-icon"
+                                 style="background-image: url(assets/img/linza1.png);">
+                            </div>
+                            <div class="how-apply-card__body">
+                                <p>Перед використанням очних крапель УмаСтар контактні лінзи виймати не потрібно</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-gymnastic">
+            <div class="container">
+                <h2 class="section__title">Вправи для очей</h2>
+                <div class="section__sub-title">
+                    Якщо у вас навантаження на зір велике, то щоденно слід робити вправи для очей.
+                    Це допоможе зняти напругу з м’язів ока та покращити кровообіг в них.
+                    Кожну вправу повторюйте по 10 разів.
+
+                </div>
+            </div>
+            <div class="wrap-gymnastic-list">
+                <div class="container">
+                    <div class="gymnastic swiper-container" id="gymnasticSlider">
+                        <div class="swiper-wrapper">
+                            <div class="gymnastic-card swiper-slide">
+                                <div class="left-column"></div>
+                                <div class="gymnastic-card__content">
+                                    <div class="gymnastic-card__wrap-img"
+                                         style="background-image: url(assets/img/b1.png);"></div>
+                                    <div class="gymnastic-card__body">
+                                        <p>Подивіться вправо
+                                            потім вліво</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gymnastic-card swiper-slide">
+                                <div class="left-column"></div>
+                                <div class="gymnastic-card__content">
+                                    <div class="gymnastic-card__wrap-img"
+                                         style="background-image: url(assets/img/b2.png);"></div>
+                                    <div class="gymnastic-card__body">
+                                        <p>Поверніть очі по колу
+                                            спочатку за годинниковою
+                                            стрілкою, потім – проти</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gymnastic-card swiper-slide">
+                                <div class="left-column"></div>
+                                <div class="gymnastic-card__content">
+                                    <div class="gymnastic-card__wrap-img"
+                                         style="background-image: url(assets/img/b3.png);"></div>
+                                    <div class="gymnastic-card__body">
+                                        <p>Направте погляд вліво
+                                            і вгору, потім вліво і вниз</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gymnastic-card swiper-slide">
+                                <div class="left-column"></div>
+                                <div class="gymnastic-card__content">
+                                    <div class="gymnastic-card__wrap-img"
+                                         style="background-image: url(assets/img/b4.png);"></div>
+                                    <div class="gymnastic-card__body">
+                                        <p>Подивіться вправо і вгору,
+                                            потім вліво і вниз</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gymnastic-card swiper-slide">
+                                <div class="left-column"></div>
+                                <div class="gymnastic-card__content">
+                                    <div class="gymnastic-card__wrap-img"
+                                         style="background-image: url(assets/img/b5.png);"></div>
+                                    <div class="gymnastic-card__body">
+                                        <p>Подивіться вправо і вгору,
+                                            потім вліво і вниз</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="gymnastic-card swiper-slide">
+                                <div class="left-column"></div>
+                                <div class="gymnastic-card__content">
+                                    <div class="gymnastic-card__wrap-img"
+                                         style="background-image: url(assets/img/b6.png);"></div>
+                                    <div class="gymnastic-card__body">
+                                        <p>Подивіться на
+                                            кінчик носа</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gymnastic-card swiper-slide">
+                                <div class="left-column"></div>
+                                <div class="gymnastic-card__content">
+                                    <div class="gymnastic-card__wrap-img"
+                                         style="background-image: url(assets/img/b7.png);"></div>
+                                    <div class="gymnastic-card__body">
+                                        <p>«Намалюйте» очима зигзаг,
+                                            спочатку зліва направо,
+                                            потім в іншу сторону</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gymnastic-card swiper-slide">
+                                <div class="left-column"></div>
+                                <div class="gymnastic-card__content">
+                                    <div class="gymnastic-card__wrap-img"
+                                         style="background-image: url(assets/img/b8.png);"></div>
+                                    <div class="gymnastic-card__body">
+                                        <p>Піднесіть якийсь предмет до носа
+                                            та зосередьте погляд на цьому
+                                            предметі. Потім, не змінюючи
+                                            положення голови, подивіться
+                                            на інший предмет, що знаходиться
+                                            на далекій відстані від вас</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gymnastic-card swiper-slide">
+                                <div class="left-column"></div>
+                                <div class="gymnastic-card__content">
+                                    <div class="gymnastic-card__wrap-img"
+                                         style="background-image: url(assets/img/b9.png);"></div>
+                                    <div class="gymnastic-card__body">
+                                        <p>Дуже легко і швидко
+                                            поморгайте, ледь
+                                            змикаючи повіки</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gymnastic-card swiper-slide">
+                                <div class="left-column"></div>
+                                <div class="gymnastic-card__content">
+                                    <div class="gymnastic-card__wrap-img"
+                                         style="background-image: url(assets/img/b10.png);"></div>
+                                    <div class="gymnastic-card__body">
+                                        <p>Ретельно потріть
+                                            долоні одну об одну
+                                            та покладіть їх
+                                            на очі, розслабтеся</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <a href="#" class="link-upload">
+                   <span class="wrap-img">
+                       <img src="assets/img/upload.png" alt="" class="img">
+                   </span>
+                <span>завантажити вправи для очей</span>
+            </a>
+        </section>
+
+        <section class="section-question">
+            <div class="right-content">
+                <div class="heading">
+                    <h2 class="section__title">Запитання</h2>
+                    <div class="block-icon">
+                        <div class="wrap-icon-question">
+                            <img src="assets/img/linza.png" alt="" class="img-guestion">
+                        </div>
+                        <div class="wrap-icon-question">
+                            <img src="assets/img/linza.png" alt="" class="img-guestion">
+                        </div>
+                        <div class="wrap-icon-question">
+                            <img src="assets/img/linza.png" alt="" class="img-guestion">
+                        </div>
+                        <div class="wrap-icon-question">
+                            <img src="assets/img/linza.png" alt="" class="img-guestion">
+                        </div>
+                        <div class="wrap-icon-question">
+                            <img src="assets/img/linza.png" alt="" class="img-guestion">
+                        </div>
+                        <div class="wrap-icon-question">
+                            <img src="assets/img/linza.png" alt="" class="img-guestion">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-list" id="questionsSlider">
+                    <div class="swiper-wrapper">
+                        <div class="question-list__item swiper-slide">
+                            <div class="bg-icon"></div>
+                            <div class="question">
+                                Я ношу контактні лінзи. Чи треба їх знімати
+                                перед застосуванням очних крапель Умастар?
+                            </div>
+                            <div class="answer">
+                                УмаСтар сумісний з контактними лінзами, тому
+                                знімати їх перед використанням крапель не потрібно
+                            </div>
+                        </div>
+                        <div class="question-list__item swiper-slide">
+                            <div class="bg-icon"></div>
+                            <div class="question">
+                                Як довго можна зберігати краплі
+                                УмаСтар після відкриття?
+                            </div>
+                            <div class="answer">
+                                Не більше, ніж 90 днів з моменту
+                                відкриття контейнера
+                            </div>
+                        </div>
+                        <div class="question-list__item swiper-slide">
+                            <div class="bg-icon"></div>
+                            <div class="question">
+                                Чи можна застосовувати УмаСтар дітям?
+                            </div>
+                            <div class="answer">
+                                Так, можна
+                            </div>
+                        </div>
+                        <div class="question-list__item swiper-slide">
+                            <div class="bg-icon"></div>
+                            <div class="question">
+                                Чи можна застосовувати УмаСтар вагітним
+                                та жінкам, що годують груддю?
+                            </div>
+                            <div class="answer">
+                                Так, можна
+                            </div>
+                        </div>
+                        <div class="question-list__item swiper-slide">
+                            <div class="bg-icon"></div>
+                            <div class="question">
+                                Чи може бути алергічна реакція
+                                на УмаСтар?
+                            </div>
+                            <div class="answer">
+                                УмаСтар зазвичай добре переноситься,
+                                але при алергії або гіперчутливості
+                                до будь-якого компонента очних крапель
+                                Умастар не виключена алергічна реакція.
+                            </div>
+                        </div>
+                        <div class="question-list__item swiper-slide">
+                            <div class="bg-icon"></div>
+                            <div class="question">
+                                Чи можна застосовувати УмаСтар
+                                без призначення лікаря?
+                            </div>
+                            <div class="answer">
+                                УмаСтар є медичним виробом, тому його можна
+                                придбати в аптеці без рецепта. Але нагадуємо,
+                                що самолікування може бути шкідливим для
+                                вашого здоров’я, тому перед застосуванням
+                                слід проконсультуватися з лікарем
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-buy">
+            <div class="map-wrap">
+                <h2 class="section__title">Де купити</h2>
+            </div>
+            <div class="right-part">
+                <div class="btn-block">
+                    <div class="decor-wrap">
+
+                    </div>
+                    <a target="_blank" class="btn btn_main">liki24.com</a>
+                </div>
+                <div class="btn-block">
+                    <a target="_blank" class="btn btn_main">tabletki.ua</a>
+                </div>
+                <div class="btn-block">
+                    <a target="_blank" class="btn btn_main">geoapteka.ua</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="top-row">
+                <a href="#" class="footer-logo">
+                    <img src="assets/img/logo-profi3.png" alt="" class="img">
+                </a>
+                <ul class="social-list">
+                    <li class="social-list__item">
+                        <a href="#" class="social-list__link">
+                            <span class="icon icon-facebook"></span>
+                        </a>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="#" class="social-list__link">
+                            <span class="icon icon-youtube"></span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="link-contact">Контакти </a>
+            </div>
+            <div class="disclaimer">
+                <img class="footer__text-img" src="assets/img/footer-text.png" alt="">
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<div id="overlay"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="build/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+
+.main-nav {
+  display: flex;
+
+  .menu {
+    display: flex;
+
+    &__item {
+      color: $black;
+      font-family: $primary-font;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1;
+      margin-left: 23px;
+      margin-right: 23px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      a {
+        display: inline-block;
+        color: inherit;
+        padding: 6px 10px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        -webkit-transition: .35s;
+        -moz-transition: .35s;
+        -ms-transition: .35s;
+        -o-transition: .35s;
+        transition: .35s;
+
+        &:hover {
+          border-color: #28a1de;
+          color: #28a1de;
+        }
+      }
+    }
+
+  }
+
+
+  .btn-close {
+    position: absolute;
+    right: 35px;
+    top: 20px;
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .lang-switch {
+    display: flex;
+    margin: auto;
+    color: #000000;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+
+    a {
+      color: #000;
+      display: inline-block;
+      position: relative;
+      padding-left: 12px;
+      &:first-child{
+        padding-left: 0;
+      }
+      &:before{
+        position: absolute;
+        content: '/';
+       left: 0;
+        color: #000;
+        font-weight: 600;
+      }
+      &:first-child:before{
+        content: none;
+      }
+      &.active-lang{
+        color: #3eb4e8;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+
+@include respond-to($lg) {
+  .main-nav {
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 320px;
+    background-color: $white;
+    max-height: 100%;
+    overflow-y: auto;
+    text-align: left;
+    transition: transform .5s;
+    transform: translateX(-100%);
+    z-index: 999;
+
+    .menu__item {
+      margin: 0;
+      font-size: 21px;
+    }
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    .menu {
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+
+    .lang-switch{
+      position: absolute;
+      left: 30px;
+      top: 25px;
+    }
+  }
+  .burger {
+    display: block !important;
+  }
+  .btn-close {
+    display: block !important;
+  }
+}
+

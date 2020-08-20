@@ -1,0 +1,79 @@
+.section-banner {
+  padding-top: 125px;
+
+  .top-content {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  .banner-part {
+    position: relative;
+    background-image: linear-gradient(to bottom, #00e2ff, #009aff);
+    min-height: 768px;
+    padding: 45px 60px;
+    width: 32%;
+    color: $white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+  .banner-part:first-child:before,
+  .wrap-banner-bg{
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+  }
+  .banner-part:first-child:before{
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: url(../assets/img/star.png);
+    min-height: 38.75%;
+    width: 53%;
+    right: 0;
+    top: 0;
+  }
+  .slogan{
+    font-size: 4.89rem;
+    line-height: 0.55;
+    margin-bottom: 65px;
+    font-weight: 600;
+    font-family: $secondary-font;
+    span{
+      font-family:$primary-font;
+      font-size: 35px;
+    }
+  }
+  .bottom-content{
+    padding-top: 78px;
+  }
+  .part_left{
+    display: none;
+  }
+  .part_right{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .link-banner{
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 900;
+    color: #28a1de;
+    .wrap-icon{
+      background-color: rgba(255,255,255, .5);
+      width: 94px;
+      min-height: 102px;
+      border-radius: 8px;
+      border: 1px solid #28a1de;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: 50%;
+      background-size: 50%;
+      overflow: hidden;
+    }
+  }
+}

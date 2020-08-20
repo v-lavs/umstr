@@ -1,0 +1,133 @@
+.section-gymnastic {
+  text-align: center;
+
+  .section__sub-title {
+    color: #8b8b8b;
+    font-size: 17px;
+    line-height: 1.38;
+    max-width: 672px;
+    margin: 0 auto 70px;
+  }
+
+  .swiper-wrapper {
+    counter-reset: list 0;
+  }
+
+  .gymnastic-card:before {
+    counter-increment: list;
+    content: counter(list) " ";
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 300;
+    opacity: .8;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    font-family: "Muread Pro", sans-serif;
+    top: 15px;
+    width: 30px;
+    z-index: 2;
+  }
+
+  .gymnastic-card:nth-child(-n+6):before {
+    left: 3px;
+  }
+  .wrap-gymnastic-list{
+    position: relative;
+    padding-bottom: 28px;
+    &:after,
+    &:before{
+      position: absolute;
+      display: block;
+      content: '';
+      width: 100vw;
+      height: 3px;
+      background-image: linear-gradient(to right, #00e2ff, #009aff);
+    }
+    &:after{
+      bottom: 0;
+    }
+
+  }
+  .gymnastic-card {
+    display: flex;
+    margin-top: 50px;
+    padding-bottom: 34px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height:0.95;
+    color: #28a1de;
+    .left-column {
+      position: relative;
+      min-height: 205px;
+      min-width: 30px;
+      background-image: linear-gradient(to bottom, #00e2ff, #009aff);
+
+      &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        background-image: url(../assets/img/block1.png);
+        background-repeat: no-repeat;
+        background-position: 0 bottom;
+        -webkit-background-size: 100%;
+        background-size: 100%;
+        bottom: 15px;
+        z-index: 2;
+        width: 14px;
+        height: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+  }
+
+  .gymnastic-card__wrap-img {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-height: 137px;
+    margin-bottom: 25px;
+  }
+
+  .gymnastic-card__content {
+    padding-left: 23px;
+    padding-right: 30px;
+  }
+
+  .link-upload{
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 15.25px;
+    color: #9d9d9c;
+    display: inline-block;
+    margin: -36px auto 0;
+
+
+    .wrap-img{
+      position: relative;
+      z-index: 2;
+      margin: 0 auto 16px;
+      display: block;
+      width: 73px;
+      height: 73px;
+      padding: 18px;
+      border: 2px solid #00adff;
+      border-radius: 50%;
+      background-color: $white;
+      box-shadow: 0 0 0 13px $white;
+    }
+  }
+
+
+  .swiper-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .gymnastic .swiper-slide {
+    width: 20%;
+    height: auto;
+  }
+}

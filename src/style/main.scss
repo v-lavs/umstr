@@ -1,0 +1,24 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+@import 'components/grid';
+
+@import 'components/nav';
+@import 'components/button';
+@import 'components/slider';
+@import 'components/sections/section-banner';
+@import 'components/sections/section-about';
+@import 'components/sections/section-indication';
+@import 'components/sections/section-gymnastic';
+@import 'components/sections/section-question';
+@import 'components/sections/section-buy';
+
+@import 'components/header';
+@import 'components/footer';
+
+
+

@@ -1,0 +1,125 @@
+.burger {
+  display: none;
+  width: 52px;
+  background-color: transparent;
+  border: none;
+
+  .line {
+    display: block;
+    width: 100%;
+    background-color: #b2b2b2;
+    height: 4px;
+    margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-image: linear-gradient(to right, #c5f7ff , #ffffff 10%, #ffffff 90%, #c5f7ff );
+  z-index: 1000;
+  transition: .35s;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  .logo {
+    width: 172px;
+    height: 33px;
+  }
+
+  .main-logo {
+    display: block;
+    width: 248px;
+    height: 78px;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .header_active {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: .35s;
+  }
+
+  &.header_active {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: height .35s;
+  }
+}
+
+
+//  ------ backdrop
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .5;
+  z-index: 800;
+}
+
+@include respond-to($md) {
+  .header {
+    .container {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+
+  }
+}
+
+@include respond-to($sm) {
+  .header {
+    .container {
+
+    }
+
+    .logo {
+      width: 140px;
+      height: 25px;
+    }
+
+    .main-logo {
+
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .header {
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .burger {
+      width: 35px;
+    }
+    .main-logo {
+
+    }
+  }
+}

@@ -1,0 +1,93 @@
+html {
+  font: 600 18px/1.44 $primary-font;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-image: linear-gradient(to right, #c5f7ff, #ffffff 10%, #ffffff 90%, #c5f7ff);
+}
+
+.color-blue {
+  color: #28a1de;
+}
+
+.wrapper {
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dynamic-content {
+  ul{
+    margin-bottom: 40px;
+  }
+  li {
+    position: relative;
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    &:before{
+      position: absolute;
+      content: '';
+      background-image: url(../assets/img/marker.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+      display: block;
+      width: 14px;
+      height: 14px;
+      left: 0;
+      top: 5px;
+    }
+  }
+}
+
+.section {
+  padding-top: 150px;
+  padding-bottom: 200px;
+}
+
+.section__title {
+  font-size: 71px;
+  font-weight: 600;
+  color: #28a1de;
+  margin-bottom: 15px;
+}
+
+.section__sub-title {
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.13;
+  color: #28a1de;
+  letter-spacing: 0.32px;
+  margin-bottom: 40px;
+}
+
+.section__text {
+  margin-bottom: 30px;
+}
+
+.section p {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #323232;
+  opacity: 0.67;
+  z-index: 800;
+}
+
