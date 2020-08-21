@@ -8,11 +8,10 @@
     &__item {
       color: $black;
       font-family: $primary-font;
-      font-size: 18px;
       font-weight: 600;
       line-height: 1;
-      margin-left: 23px;
-      margin-right: 23px;
+      margin-left: 20px;
+      margin-right: 20px;
 
       a {
         display: inline-block;
@@ -91,6 +90,34 @@
         color: #3eb4e8;
         font-weight: 900;
       }
+    }
+  }
+}
+
+
+@include respond-to($screen-lg) {
+  .main-nav {
+    .lang-switch {
+      margin-left: 0;
+    }
+
+    .menu__item {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+}
+
+@include respond-to($screen-md) {
+  .main-nav {
+    .menu {
+      padding-right: 15px;
+    }
+
+    .menu__item {
+      font-size: 13px;
+      margin-left: 10px;
+      margin-right: 10px;
     }
   }
 }

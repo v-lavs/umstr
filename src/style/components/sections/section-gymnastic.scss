@@ -1,11 +1,38 @@
 .section-gymnastic {
   text-align: center;
 
+  .section__title {
+    position: relative;
+    max-width: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .corner {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 900px;
+        width: 100px;
+        bottom: 0;
+        right: -150px;
+        border-bottom: 2px solid blue;
+        border-right: 2px solid blue;
+        z-index: 1;
+      }
+    }
+  }
+
   .section__sub-title {
     color: #8b8b8b;
     font-size: 17px;
     line-height: 1.38;
-    max-width: 672px;
+    max-width: 680px;
     margin: 0 auto 70px;
   }
 
@@ -33,11 +60,13 @@
   .gymnastic-card:nth-child(-n+6):before {
     left: 3px;
   }
-  .wrap-gymnastic-list{
+
+  .wrap-gymnastic-list {
     position: relative;
     padding-bottom: 28px;
+
     &:after,
-    &:before{
+    &:before {
       position: absolute;
       display: block;
       content: '';
@@ -45,19 +74,22 @@
       height: 3px;
       background-image: linear-gradient(to right, #00e2ff, #009aff);
     }
-    &:after{
+
+    &:after {
       bottom: 0;
     }
 
   }
+
   .gymnastic-card {
     display: flex;
     margin-top: 50px;
     padding-bottom: 34px;
     font-size: 17px;
     font-weight: 400;
-    line-height:0.95;
+    line-height: 0.95;
     color: #28a1de;
+
     .left-column {
       position: relative;
       min-height: 205px;
@@ -99,7 +131,7 @@
     padding-right: 30px;
   }
 
-  .link-upload{
+  .link-upload {
     font-size: 17px;
     font-weight: 500;
     line-height: 15.25px;
@@ -108,7 +140,7 @@
     margin: -36px auto 0;
 
 
-    .wrap-img{
+    .wrap-img {
       position: relative;
       z-index: 2;
       margin: 0 auto 16px;

@@ -6,9 +6,15 @@
 }
 
 
-@include respond-to($lg) {
+@include respond-to($screen-lg) {
   .container {
+    max-width: 1440px;
+  }
+}
 
+@include respond-to($screen-md) {
+  .container {
+    max-width: 1240px;
   }
 }
 

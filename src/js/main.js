@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     var scrolled;
 
-    function onHeaderScrol() {
+    function onHeaderScroll() {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
         if (scrolled > 60) {
             jQuery(".header").addClass('header_active');
@@ -27,7 +27,7 @@ $(document).ready(function () {
     $(document).on('scroll', function () {
         onHeaderScroll();
     });
-    onHeaderScrol();
+    onHeaderScroll();
 
     /**
      * MOB MENU SCRIPT
@@ -57,7 +57,7 @@ $(document).ready(function () {
 
     function slidersInit() {
         if ($(window).width() <= 1080) {
-          if (!advantagesSlider) {
+            if (!advantagesSlider) {
                 advantagesSlider = new Swiper('#advantagesSlider', {
                     slidesPerView: 1,
                     breakpoints: {
@@ -112,7 +112,6 @@ $(document).ready(function () {
                 });
             }
         } else {
-
             if (advantagesSlider) {
                 advantagesSlider.destroy(true, true);
                 advantagesSlider = null;

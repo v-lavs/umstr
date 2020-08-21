@@ -37,6 +37,7 @@
   .logo {
     max-width: 172px;
     margin-left: 15px;
+
     img {
       width: 100%;
       height: auto;
@@ -55,9 +56,10 @@
       display: block;
     }
   }
+
   &.header_active {
     background-color: #fff;
-    transition:  .35s;
+    transition: .35s;
   }
 }
 
@@ -76,12 +78,30 @@
   z-index: 800;
 }
 
+@include respond-to($screen-lg) {
+  .header {
+    .main-logo {
+      max-width: 180px;
+    }
+    .logo {
+      max-width: 150px;
+    }
+  }
+}
+
+@include respond-to($screen-lg) {
+  .header {
+    .main-logo {
+      max-width: 150px;
+    }
+    .logo {
+      max-width: 120px;
+    }
+  }
+}
+
 @include respond-to($md) {
   .header {
-    .container {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
 
 
   }
@@ -89,9 +109,6 @@
 
 @include respond-to($sm) {
   .header {
-    .container {
-
-    }
 
     .logo {
       width: 140px;
@@ -114,6 +131,7 @@
     .burger {
       width: 35px;
     }
+
     .main-logo {
 
     }

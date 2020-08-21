@@ -68,6 +68,7 @@
     padding: 50px 0 55px 10px;
     border-radius: 50px 0 0 50px;
     border-right: 0;
+    max-width: 1180px;
 
     &:after,
     &:before {
@@ -88,7 +89,7 @@
       background-image: linear-gradient(to right, #ffffff 85%, #c5f7ff);
     }
     &__item {
-      padding:0 4% 40px;
+      padding:0 6.5% 40px;
     }
     .bg-icon {
       display: none;
@@ -117,6 +118,6 @@
   }
 
   .swiper-slide {
-    width: 47%;
+    width: 50%;
   }
 }
