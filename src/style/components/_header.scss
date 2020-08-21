@@ -22,9 +22,12 @@
   left: 0;
   right: 0;
   top: 0;
-  background-image: linear-gradient(to right, #c5f7ff , #ffffff 10%, #ffffff 90%, #c5f7ff );
   z-index: 1000;
   transition: .35s;
+  &.header_active {
+    background-color: #fff;
+    transition:  .35s;
+  }
 
   .container {
     display: flex;
@@ -57,17 +60,8 @@
     }
   }
 
-  .header_active {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    transition: .35s;
-  }
 
-  &.header_active {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    transition: height .35s;
-  }
+
 }
 
 

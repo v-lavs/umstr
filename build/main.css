@@ -706,7 +706,7 @@ body {
   z-index: 1;
   width: 20%;
   height: 100%;
-  background: url("../assets/img/eye-bg.png") center center no-repeat;
+  background: url("../assets/img/eye-bg1.png") center center no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
 }
@@ -915,8 +915,12 @@ body {
   left: 0;
   right: 0;
   top: 0;
-  background-image: linear-gradient(to right, #c5f7ff, #ffffff 10%, #ffffff 90%, #c5f7ff);
   z-index: 1000;
+  transition: .35s;
+}
+
+.header.header_active {
+  background-color: #fff;
   transition: .35s;
 }
 
@@ -950,18 +954,6 @@ body {
   width: 100%;
   height: auto;
   display: block;
-}
-
-.header .header_active {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  transition: .35s;
-}
-
-.header.header_active {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  transition: height .35s;
 }
 
 .backdrop {

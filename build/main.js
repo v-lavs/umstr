@@ -12,15 +12,23 @@ $(document).ready(function () {
     /**
      * HEADER SCROLL
      */
+    var scrolled;
 
     function onHeaderScrol() {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrolled > 60) {
-            jQuery(".header").addClass('header_active');
+        if (scrolled > 0) {
+            $(".header").addClass('header_active');
         } else {
-            jQuery(".header").removeClass('header_active');
+            $(".header").removeClass('header_active');
         }
     }
+
+    $(document).on('scroll', function () {
+        onHeaderScrol()
+    });
+
+    onHeaderScrol();
+
 
     /**
      * MOB MENU SCRIPT
