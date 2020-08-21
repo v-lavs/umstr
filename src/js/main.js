@@ -13,6 +13,8 @@ $(document).ready(function () {
      * HEADER SCROLL
      */
 
+    var scrolled;
+
     function onHeaderScrol() {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
         if (scrolled > 60) {
@@ -21,6 +23,11 @@ $(document).ready(function () {
             jQuery(".header").removeClass('header_active');
         }
     }
+
+    $(document).on('scroll', function () {
+        onHeaderScroll();
+    });
+    onHeaderScrol();
 
     /**
      * MOB MENU SCRIPT
