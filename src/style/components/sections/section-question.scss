@@ -2,7 +2,7 @@
   display: flex;
 
   .right-content {
-    width: 75%;
+    width: 70.5%;
     margin-left: auto;
 
   }
@@ -13,8 +13,15 @@
     display: flex;
   }
 
-  .block-icon {
-
+  .bg-icon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size:inherit;
+    background-size: inherit;
+    min-height: 80px;
+    padding-top: 16px;
+    max-width: 12%;
+    margin: 0 auto;
   }
 
   .heading {
