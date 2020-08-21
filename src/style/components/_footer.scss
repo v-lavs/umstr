@@ -36,18 +36,19 @@
 
   .social-list {
     display: flex;
-  }
-  .social-list__link {
-    display: inline-block;
-    margin-right: 70px;
+    .social-list__link {
+      display: inline-block;
+      margin-right: 70px;
 
-    .icon {
-      font-size: 37px;
+      .icon {
+        font-size: 37px;
+      }
+    }
+    .social-list__link:last-child{
+      margin-right: 0;
     }
   }
-  .social-list__link:last-child{
-    margin-right: 0;
-  }
+
   .footer-logo {
     display: inline-block;
     width: 40px;

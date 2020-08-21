@@ -25,11 +25,11 @@ body {
 
 .dynamic-content {
   ul{
+    font-size: 18px;
     margin-bottom: 40px;
   }
   li {
     position: relative;
-    font-size: 18px;
     margin-bottom: 15px;
     padding-left: 35px;
     &:before{
