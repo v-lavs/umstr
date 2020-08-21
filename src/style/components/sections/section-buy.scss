@@ -1,3 +1,92 @@
-.section-buy{
+.section-buy {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 230px;
   padding-bottom: 120px;
+
+  .section__title {
+    text-align: center;
+  }
+
+  .section__part {
+    width: 50%;
+  }
+
+  .resource-list {
+    display: flex;
+    padding-top: 45px;
+
+    &__item {
+      flex-shrink: 0;
+      text-align: center;
+      padding: 0 30px;
+      max-width: 240px;
+      width: 100%;
+
+      .btn {
+        min-width: 175px;
+      }
+    }
+  }
+
+  .product-block {
+    position: relative;
+    max-width: 100px;
+    width: 100%;
+    margin: 0 auto 30px;
+
+    img {
+      position: relative;
+      display: block;
+      max-width: 100%;
+      height: auto;
+      z-index: 2;
+    }
+
+    &__circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      width: 145%;
+      padding-top: 142%;
+      border: 2px solid #28a1de;
+      z-index: 1;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 120%;
+        padding-top: 115%;
+        border: 2px solid #28a1de;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .section-buy {
+    .product-block {
+      display: none;
+    }
+    .resource-list__item {
+        &:before {
+          content: '';
+          position: relative;
+          display: block;
+          width: 50px;
+          height: 60px;
+          margin: 0 auto 10px;
+          background: url('../assets/img/marker-location.png') no-repeat center center;
+          -webkit-background-size: contain;
+          background-size: contain;
+        }
+    }
+  }
 }

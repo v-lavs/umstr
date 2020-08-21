@@ -1,10 +1,23 @@
 .section-question {
+  position: relative;
   display: flex;
+  margin-bottom: 100px;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 5%;
+    top: 0;
+    z-index: 1;
+    width: 20%;
+    height: 100%;
+    background: url("../assets/img/eye-bg.png") center center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
 
   .right-content {
     width: 70.5%;
     margin-left: auto;
-
   }
 
   .question-list,
@@ -16,7 +29,7 @@
   .bg-icon {
     background-position: center center;
     background-repeat: no-repeat;
-    -webkit-background-size:inherit;
+    -webkit-background-size: inherit;
     background-size: inherit;
     min-height: 80px;
     padding-top: 16px;
@@ -29,34 +42,57 @@
     align-items: baseline;
   }
 
+  .icons-block {
+    display: flex;
+    overflow: hidden;
+    flex-grow: 1;
+    align-items: center;
+    max-width: 900px;
+    padding-right: 3%;
+    justify-content: space-between;
+    padding-left: 5%;
+
+    &__item {
+      margin: 0 5%;
+      filter: grayscale(100%);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
   .question-list {
     position: relative;
     flex-wrap: wrap;
-    padding: 55px 0 55px 78px;
+    padding: 50px 0 55px 10px;
     border-radius: 50px 0 0 50px;
-    background-clip: padding-box;
-    border: 1px solid  transparent;
-    background-image: linear-gradient(to right, #ffffff 85%, #c5f7ff);
     border-right: 0;
 
+    &:after,
     &:before {
       content: '';
       position: absolute;
       top: 0;
-      right: 0;
+      width: 100vw;
       bottom: 0;
       left: 0;
-      z-index: -1;
+      z-index: 1;
       margin: -1px;
       border-radius: inherit;
       background: linear-gradient(to right, rgb(0, 210, 255), rgb(58, 123, 213));
     }
-
-  }
-
-  .question-list__item {
-    padding-right: 170px;
-
+    &:after {
+      background-clip: padding-box;
+      border: 2px solid transparent;
+      background-image: linear-gradient(to right, #ffffff 85%, #c5f7ff);
+    }
+    &__item {
+      padding:0 4% 40px;
+    }
+    .bg-icon {
+      display: none;
+    }
   }
 
   .question {
@@ -65,7 +101,7 @@
     line-height: 1;
     color: #000000;
     margin-bottom: 16px;
-    }
+  }
 
   .answer {
     font-size: 17px;
@@ -75,7 +111,9 @@
   }
 
   .swiper-wrapper {
+    position: relative;
     flex-wrap: wrap;
+    z-index: 2;
   }
 
   .swiper-slide {

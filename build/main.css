@@ -109,8 +109,6 @@ body {
 
 .wrapper {
   overflow: hidden;
-  max-width: 1920px;
-  margin: 0 auto;
 }
 
 .img {
@@ -188,9 +186,9 @@ body {
 }
 
 .container {
-  max-width: 1920px;
+  max-width: 1840px;
   width: 100%;
-  padding: 0 5%;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
@@ -335,31 +333,16 @@ body {
   background-image: linear-gradient(to bottom, #00e2ff, #009aff);
   min-height: 768px;
   padding: 45px 60px;
-  width: 32%;
+  width: calc(33.33% - 16px);
   color: #ffffff;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
   flex-direction: column;
-}
-
-.section-banner .banner-part:first-child:before,
-.section-banner .wrap-banner-bg {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  background-position: center center;
-}
-
-.section-banner .banner-part:first-child:before {
-  position: absolute;
-  content: '';
-  display: block;
-  background-image: url(../assets/img/star.png);
-  min-height: 38.75%;
-  width: 53%;
-  right: 0;
-  top: 0;
+  background-position: top center;
 }
 
 .section-banner .slogan {
@@ -490,7 +473,13 @@ body {
   top: 0;
   bottom: 0;
   left: 100%;
-  background-color: #000;
+  overflow: hidden;
+}
+
+.section-indication .block-bg .img {
+  position: relative;
+  display: block;
+  transform: translateX(15%);
 }
 
 .section-indication .title {
@@ -579,6 +568,7 @@ body {
 }
 
 .section-gymnastic .swiper-wrapper {
+  text-align: left;
   counter-reset: list 0;
 }
 
@@ -660,7 +650,8 @@ body {
   background-position: 0 0;
   -webkit-background-size: cover;
   background-size: cover;
-  min-height: 137px;
+  height: auto;
+  max-width: 100%;
   margin-bottom: 25px;
 }
 
@@ -702,7 +693,22 @@ body {
 }
 
 .section-question {
+  position: relative;
   display: flex;
+  margin-bottom: 100px;
+}
+
+.section-question:before {
+  content: '';
+  position: absolute;
+  left: 5%;
+  top: 0;
+  z-index: 1;
+  width: 20%;
+  height: 100%;
+  background: url("../assets/img/eye-bg.png") center center no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
 }
 
 .section-question .right-content {
@@ -732,32 +738,60 @@ body {
   align-items: baseline;
 }
 
+.section-question .icons-block {
+  display: flex;
+  overflow: hidden;
+  flex-grow: 1;
+  align-items: center;
+  max-width: 900px;
+  padding-right: 3%;
+  justify-content: space-between;
+  padding-left: 5%;
+}
+
+.section-question .icons-block__item {
+  margin: 0 5%;
+  filter: grayscale(100%);
+}
+
+.section-question .icons-block__item:last-child {
+  margin-right: 0;
+}
+
 .section-question .question-list {
   position: relative;
   flex-wrap: wrap;
-  padding: 55px 0 55px 78px;
+  padding: 50px 0 55px 10px;
   border-radius: 50px 0 0 50px;
-  background-clip: padding-box;
-  border: 1px solid  transparent;
-  background-image: linear-gradient(to right, #ffffff 85%, #c5f7ff);
   border-right: 0;
 }
 
+.section-question .question-list:after,
 .section-question .question-list:before {
   content: '';
   position: absolute;
   top: 0;
-  right: 0;
+  width: 100vw;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   margin: -1px;
   border-radius: inherit;
   background: linear-gradient(to right, #00d2ff, #3a7bd5);
 }
 
+.section-question .question-list:after {
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  background-image: linear-gradient(to right, #ffffff 85%, #c5f7ff);
+}
+
 .section-question .question-list__item {
-  padding-right: 170px;
+  padding: 0 4% 40px;
+}
+
+.section-question .question-list .bg-icon {
+  display: none;
 }
 
 .section-question .question {
@@ -776,7 +810,9 @@ body {
 }
 
 .section-question .swiper-wrapper {
+  position: relative;
   flex-wrap: wrap;
+  z-index: 2;
 }
 
 .section-question .swiper-slide {
@@ -784,7 +820,75 @@ body {
 }
 
 .section-buy {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 230px;
   padding-bottom: 120px;
+}
+
+.section-buy .section__title {
+  text-align: center;
+}
+
+.section-buy .section__part {
+  width: 50%;
+}
+
+.section-buy .resource-list {
+  display: flex;
+  padding-top: 45px;
+}
+
+.section-buy .resource-list__item {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 0 30px;
+  max-width: 240px;
+  width: 100%;
+}
+
+.section-buy .resource-list__item .btn {
+  min-width: 175px;
+}
+
+.section-buy .product-block {
+  position: relative;
+  max-width: 100px;
+  width: 100%;
+  margin: 0 auto 30px;
+}
+
+.section-buy .product-block img {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  z-index: 2;
+}
+
+.section-buy .product-block__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 145%;
+  padding-top: 142%;
+  border: 2px solid #28a1de;
+  z-index: 1;
+}
+
+.section-buy .product-block__circle:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  padding-top: 115%;
+  border: 2px solid #28a1de;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
 }
 
 .burger {
@@ -822,19 +926,23 @@ body {
   align-items: center;
   z-index: 3;
   padding-top: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .header .logo {
-  width: 172px;
-  height: 33px;
+  max-width: 172px;
   margin-left: 15px;
+}
+
+.header .logo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .header .main-logo {
   display: block;
-  width: 248px;
-  height: 78px;
+  max-width: 248px;
   margin-right: 15px;
 }
 
@@ -981,6 +1089,22 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+  .section-buy .product-block {
+    display: none;
+  }
+
+  .section-buy .resource-list__item:before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 60px;
+    margin: 0 auto 10px;
+    background: url("../assets/img/marker-location.png") no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+
   .header .logo {
     width: 140px;
     height: 25px;
