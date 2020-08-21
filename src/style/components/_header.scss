@@ -24,10 +24,6 @@
   top: 0;
   z-index: 1000;
   transition: .35s;
-  &.header_active {
-    background-color: #fff;
-    transition:  .35s;
-  }
 
   .container {
     display: flex;
@@ -59,9 +55,10 @@
       display: block;
     }
   }
-
-
-
+  &.header_active {
+    background-color: #fff;
+    transition:  .35s;
+  }
 }
 
 

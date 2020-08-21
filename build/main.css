@@ -919,11 +919,6 @@ body {
   transition: .35s;
 }
 
-.header.header_active {
-  background-color: #fff;
-  transition: .35s;
-}
-
 .header .container {
   display: flex;
   justify-content: space-between;
@@ -954,6 +949,11 @@ body {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.header.header_active {
+  background-color: #fff;
+  transition: .35s;
 }
 
 .backdrop {

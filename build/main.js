@@ -12,11 +12,12 @@ $(document).ready(function () {
     /**
      * HEADER SCROLL
      */
+
     var scrolled;
 
     function onHeaderScrol() {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrolled > 0) {
+        if (scrolled > 50) {
             $(".header").addClass('header_active');
         } else {
             $(".header").removeClass('header_active');
