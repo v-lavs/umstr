@@ -111,6 +111,12 @@
     .advantages-card__title {
       font-size: 20px;
     }
+
+    .advantages-card__wrap-icon {
+      min-height: 78px;
+      -webkit-background-size: 68px;
+      background-size: 68px;
+    }
   }
 }
 @include respond-to($md) {
