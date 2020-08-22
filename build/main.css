@@ -1260,6 +1260,12 @@ body {
     font-size: 20px;
   }
 
+  .section-about .advantages-card__wrap-icon {
+    min-height: 78px;
+    -webkit-background-size: 68px;
+    background-size: 68px;
+  }
+
   .section-indication .title {
     font-size: 2.1rem;
   }
@@ -1363,6 +1369,15 @@ body {
 
   .section-about .content-block {
     width: 100%;
+  }
+
+  .section-about .advantages-card__title {
+    font-size: 25px;
+  }
+
+  .section-about .advantages-card__wrap-icon {
+    -webkit-background-size: 75px;
+    background-size: 75px;
   }
 
   .section-question:before {
