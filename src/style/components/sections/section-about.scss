@@ -3,12 +3,14 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
   }
 
   .advantages {
     position: relative;
     overflow: visible;
-    &.swiper-initialized {
+
+    &.swiper-container-initialized {
       overflow: hidden;
     }
 
@@ -95,5 +97,26 @@
   .swiper-slide {
     width: 30%;
     height: auto;
+  }
+}
+@include respond-to($screen-lg) {
+  .section-about {
+    .advantages-card__title {
+      font-size: 24px;
+    }
+  }
+}
+@include respond-to($screen-md) {
+  .section-about {
+    .advantages-card__title {
+      font-size: 20px;
+    }
+  }
+}
+@include respond-to($md) {
+  .section-about {
+    .content-block {
+      width: 100%;
+    }
   }
 }

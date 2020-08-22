@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 230px;
+  padding-top: 11rem;
   padding-bottom: 120px;
 
   .section__title {
@@ -87,6 +87,13 @@
     }
   }
 }
+
+@include respond-to($lg) {
+  .section-buy {
+    padding-top: 7rem;
+  }
+}
+
 
 @include respond-to($md) {
   .section-buy {

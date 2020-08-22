@@ -117,7 +117,39 @@
     z-index: 2;
   }
 
+  .swiper-container-initialized {
+    .swiper-wrapper {
+      flex-wrap: nowrap;
+    }
+  }
+
   .swiper-slide {
     width: 50%;
+  }
+}
+
+
+@include respond-to($md) {
+  .section-question {
+    &:before {
+      display: none;
+    }
+    .right-content {
+      width: 100%;
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 20px;
+    }
+    .question-list {
+      padding-bottom: 0;
+      &:after,
+      &:before {
+        display: none;
+      }
+      .bg-icon {
+        display: block;
+      }
+    }
   }
 }

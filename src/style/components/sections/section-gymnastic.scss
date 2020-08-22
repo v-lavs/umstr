@@ -21,8 +21,8 @@
         width: 100px;
         bottom: 0;
         right: -150px;
-        border-bottom: 2px solid blue;
-        border-right: 2px solid blue;
+        border-bottom: 2px solid #b7f9ff;
+        border-right: 2px solid #b7f9ff;
         z-index: 1;
       }
     }
@@ -50,18 +50,16 @@
     opacity: .8;
     line-height: 1;
     position: absolute;
-    left: 0;
+    left: -1%;
     font-family: "Muread Pro", sans-serif;
     top: 15px;
-    width: 30px;
+    width: 34px;
     z-index: 2;
+    letter-spacing: -6px;
+    text-align: center;
   }
 
-  .gymnastic-card:nth-child(-n+6):before {
-    left: 3px;
-  }
-
-  .wrap-gymnastic-list {
+    .wrap-gymnastic-list {
     position: relative;
     padding-bottom: 28px;
 
@@ -92,35 +90,24 @@
 
     .left-column {
       position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
       min-height: 205px;
       min-width: 30px;
+      padding-bottom: 15px;
+      padding-left: 5px;
+      padding-right: 5px;
       background-image: linear-gradient(to bottom, #00e2ff, #009aff);
-
-      &:after {
-        position: absolute;
-        content: '';
-        display: block;
-        background-image: url(../assets/img/block1.png);
-        background-repeat: no-repeat;
-        background-position: 0 bottom;
-        -webkit-background-size: 100%;
-        background-size: 100%;
-        bottom: 15px;
-        z-index: 2;
+      img{
         width: 14px;
-        height: 90px;
-        left: 50%;
-        transform: translateX(-50%);
+        display: block;
       }
     }
 
   }
 
   .gymnastic-card__wrap-img {
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    -webkit-background-size: cover;
-    background-size: cover;
     height: auto;
     max-width: 100%;
     margin-bottom: 25px;
@@ -158,10 +145,34 @@
 
   .swiper-wrapper {
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .swiper-container-initialized {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 
   .gymnastic .swiper-slide {
     width: 20%;
     height: auto;
+  }
+}
+
+@include respond-to($screen-lg) {
+  .section-gymnastic {
+    .gymnastic-card {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include respond-to($lg) {
+  .section-gymnastic {
+    .gymnastic {
+      .swiper-slide {
+        width: 25%;
+      }
+    }
   }
 }

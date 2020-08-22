@@ -59,11 +59,17 @@ $(document).ready(function () {
         if ($(window).width() <= 1080) {
             if (!advantagesSlider) {
                 advantagesSlider = new Swiper('#advantagesSlider', {
-                    slidesPerView: 1,
+                    slidesPerView: 3,
                     breakpoints: {
-                        767: {
+                        980: {
+                            slidesPerView: 3,
+                        },
+                        480: {
                             slidesPerView: 2,
                         },
+                        200: {
+                            slidesPerView: 1
+                        }
                     },
                     pagination: {
                         el: '.swiper-pagination',

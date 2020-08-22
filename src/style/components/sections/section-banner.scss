@@ -25,34 +25,41 @@
     background-size: cover;
     background-position: top center;
   }
-  .slogan{
+
+  .slogan {
     font-size: 4.89rem;
     line-height: 0.55;
     margin-bottom: 65px;
     font-weight: 600;
     font-family: $secondary-font;
-    span{
-      font-family:$primary-font;
+
+    span {
+      font-family: $primary-font;
       font-size: 35px;
     }
   }
-  .bottom-content{
+
+  .bottom-content {
     padding-top: 78px;
   }
-  .part_left{
+
+  .part_left {
     display: none;
   }
-  .part_right{
+
+  .part_right {
     display: flex;
     justify-content: flex-end;
   }
-  .link-banner{
+
+  .link-banner {
     display: inline-block;
     font-size: 17px;
     font-weight: 900;
     color: #28a1de;
-    .wrap-icon{
-      background-color: rgba(255,255,255, .5);
+
+    .wrap-icon {
+      background-color: rgba(255, 255, 255, .5);
       width: 94px;
       min-height: 102px;
       border-radius: 8px;
@@ -62,6 +69,120 @@
       -webkit-background-size: 50%;
       background-size: 50%;
       overflow: hidden;
+    }
+  }
+}
+
+@include respond-to($screen-lg) {
+  .section-banner {
+    .banner-part {
+      min-height: 660px;
+    }
+
+    .slogan {
+      font-size: 3.75rem;
+      line-height: .7;
+      margin-bottom: 50px;
+
+      span {
+        font-size: 30px;
+      }
+    }
+
+    .btn_banner {
+      font-size: 30px;
+    }
+  }
+}
+
+@include respond-to($lg) {
+  .section-banner {
+    .banner-part {
+      padding: 40px;
+      min-height: 525px;
+    }
+
+    .btn_banner {
+      font-size: 24px;
+    }
+  }
+}
+
+@include respond-to($md) {
+  .section-banner {
+    .banner-part {
+      width: calc(50% - 15px);
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .section-banner {
+    .top-content {
+      position: relative;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .btn_banner {
+      display: none;
+    }
+
+    .bottom-content {
+      padding-top: 0;
+      border-radius: 0 0 15px 15px;
+      display: flex;
+      overflow: hidden;
+      .wrap-icon {
+        width: 25px;
+        height: 25px;
+        min-height: 0;
+        margin-right: 10px;
+      }
+      .link-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: Raleway, sans-serif;
+        font-size: 24px;
+        background-color: #31a9e5;
+        padding: 12px 10px;
+        font-weight: normal;
+        color: #fff;
+      }
+      .part_left {
+        border-right: 1px solid #fff;
+      }
+      .part_left,
+      .part_right, {
+        display: block;
+        width: 50%;
+      }
+    }
+
+    .banner-part {
+      width: 100%;
+      justify-content: center;
+      min-height: 600px;
+
+      &:first-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: none !important;
+
+        z-index: 1;
+      }
+    }
+
+    .slogan {
+      margin-bottom: 0;
     }
   }
 }
