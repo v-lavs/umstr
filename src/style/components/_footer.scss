@@ -117,6 +117,9 @@
 
 @include respond-to($sm) {
   .footer{
+    .top-row{
+      padding-bottom: 17vh;
+    }
     .social-list__item .icon {
       font-size: 20px;
     }

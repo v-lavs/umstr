@@ -110,6 +110,10 @@
 
 @include respond-to($md) {
   .section-banner {
+    .bottom-content {
+      padding-top: 40px;
+    }
+
     .banner-part {
       width: calc(50% - 15px);
 
@@ -117,10 +121,26 @@
         display: none;
       }
     }
+
+    .link-banner .wrap-icon {
+      width: 80px;
+      min-height: 88px;
+    }
   }
 }
 
 @include respond-to($sm) {
+  .section-banner {
+    .link-banner .wrap-icon {
+      width: 50px;
+      height: 50px;
+      min-height: 0;
+      margin-right: 10px;
+    }
+  }
+}
+
+@include respond-to($xs) {
   .section-banner {
     .top-content {
       position: relative;
@@ -136,12 +156,14 @@
       border-radius: 0 0 15px 15px;
       display: flex;
       overflow: hidden;
+
       .wrap-icon {
         width: 25px;
         height: 25px;
         min-height: 0;
         margin-right: 10px;
       }
+
       .link-banner {
         display: flex;
         justify-content: center;
@@ -154,16 +176,17 @@
         font-weight: normal;
         color: #fff;
       }
+
       .part_left {
         border-right: 1px solid #fff;
       }
+
       .part_left,
-      .part_right, {
+      .part_right {
         display: block;
         width: 50%;
       }
     }
-
     .banner-part {
       width: 100%;
       justify-content: center;
@@ -176,13 +199,21 @@
         right: 0;
         bottom: 0;
         background-image: none !important;
-
         z-index: 1;
       }
     }
-
     .slogan {
       margin-bottom: 0;
+    }
+  }
+}
+@include respond-to($xxs) {
+  .section-banner {
+    .bottom-content .link-banner{
+      font-size: 20px;
+    }
+    .slogan span{
+      font-size: 25px;
     }
   }
 }

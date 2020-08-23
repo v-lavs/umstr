@@ -83,19 +83,23 @@
     .main-logo {
       max-width: 180px;
     }
+
     .logo {
       max-width: 150px;
     }
   }
 }
 
-@include respond-to($screen-lg) {
+@include respond-to($lg) {
   .header {
     .main-logo {
       max-width: 150px;
+      margin-right: 0;
     }
+
     .logo {
       max-width: 120px;
+      margin-left: 0;
     }
   }
 }
@@ -110,19 +114,6 @@
   }
 }
 
-@include respond-to($sm) {
-  .header {
-
-    .logo {
-      width: 140px;
-      height: 25px;
-    }
-
-    .main-logo {
-
-    }
-  }
-}
 
 @include respond-to($xs) {
   .header {
@@ -134,9 +125,19 @@
     .burger {
       width: 35px;
     }
-
-    .main-logo {
-
+    .logo {
+      max-width: 90px;
+    }
+    .main-logo{
+      max-width: 130px;
     }
   }
+}
+
+@include respond-to($xxs) {
+  .header {
+    .logo {
+      max-width: 70px;
+    }
+   }
 }

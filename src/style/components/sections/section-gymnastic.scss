@@ -13,6 +13,7 @@
 
     .corner {
       position: relative;
+
       &:after {
         content: '';
         position: absolute;
@@ -45,21 +46,23 @@
     counter-increment: list;
     content: counter(list) " ";
     color: #ffffff;
-    font-size: 30px;
+    font-size: 37px;
     font-weight: 300;
     opacity: .8;
+    top: 15px;
+    left: -1px;
     line-height: 1;
     position: absolute;
-    left: -1%;
     font-family: "Muread Pro", sans-serif;
-    top: 15px;
-    width: 34px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
-    letter-spacing: -6px;
-    text-align: center;
+    letter-spacing: -7px;
   }
 
-    .wrap-gymnastic-list {
+  .wrap-gymnastic-list {
     position: relative;
     padding-bottom: 28px;
 
@@ -95,11 +98,13 @@
       justify-content: center;
       min-height: 205px;
       min-width: 30px;
+      padding-top: 15px;
       padding-bottom: 15px;
       padding-left: 5px;
       padding-right: 5px;
       background-image: linear-gradient(to bottom, #00e2ff, #009aff);
-      img{
+
+      img {
         width: 14px;
         display: block;
       }
@@ -174,5 +179,36 @@
         width: 25%;
       }
     }
+  }
+}
+
+@include respond-to($md) {
+  .section-gymnastic {
+    .section__title .corner:after {
+      display: none;
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .section-gymnastic {
+    .swiper-wrapper {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-gymnastic {
+    .link-upload{}
+    font-size: 15px;
+    .link-upload .wrap-img {
+      width: 65px;
+      height: 65px;
+      padding: 14px;
+      margin-bottom: 8px;
+    }
+
   }
 }

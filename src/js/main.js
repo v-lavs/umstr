@@ -56,15 +56,14 @@ $(document).ready(function () {
     var questionsSlider;
 
     function slidersInit() {
-        if ($(window).width() <= 1080) {
+        if ($(window).width() <= 1040) {
             if (!advantagesSlider) {
                 advantagesSlider = new Swiper('#advantagesSlider', {
-                    slidesPerView: 3,
+                    slidesPerView: 2,
+                    spaceBetween: 40,
                     breakpoints: {
-                        980: {
-                            slidesPerView: 3,
-                        },
-                        480: {
+
+                        768: {
                             slidesPerView: 2,
                         },
                         200: {
@@ -84,6 +83,7 @@ $(document).ready(function () {
             if (!gymnasticSlider) {
                 gymnasticSlider = new Swiper('#gymnasticSlider', {
                     slidesPerView: 1,
+                    spaceBetween: 10,
                     breakpoints: {
                         767: {
                             slidesPerView: 2,
@@ -143,7 +143,7 @@ $(document).ready(function () {
                 max_card_height = $(this).height();
             }
         });
-        $advantagesCards.css({minHeight: $(window).width() > 767 ? max_card_height : 'auto'});
+        $advantagesCards.css({minHeight: $(window).width() > 1040 ? max_card_height : 'auto'});
     }
 
     setEqualHeight();

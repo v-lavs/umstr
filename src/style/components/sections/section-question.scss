@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   margin-bottom: 100px;
+
   &:before {
     content: '';
     position: absolute;
@@ -33,7 +34,7 @@
     background-size: inherit;
     min-height: 80px;
     padding-top: 16px;
-    max-width: 12%;
+    max-width: 20%;
     margin: 0 auto;
   }
 
@@ -70,6 +71,7 @@
     border-right: 0;
     max-width: 1180px;
     box-shadow: 0 0 42px rgba(40, 161, 222, 0.2);
+
     &:after,
     &:before {
       content: '';
@@ -83,14 +85,17 @@
       border-radius: inherit;
       background: linear-gradient(to right, rgb(0, 210, 255), rgb(58, 123, 213));
     }
+
     &:after {
       background-clip: padding-box;
       border: 2px solid transparent;
       background-image: linear-gradient(to right, #ffffff 85%, #c5f7ff);
     }
+
     &__item {
-      padding:0 6.5% 40px;
+      padding: 0 6.5% 40px;
     }
+
     .bg-icon {
       display: none;
     }
@@ -120,6 +125,7 @@
   .swiper-container-initialized {
     .swiper-wrapper {
       flex-wrap: nowrap;
+      height: auto;
     }
   }
 
@@ -131,9 +137,11 @@
 
 @include respond-to($md) {
   .section-question {
+    padding-top: 40px;
     &:before {
       display: none;
     }
+
     .right-content {
       width: 100%;
       max-width: 920px;
@@ -141,15 +149,57 @@
       margin-right: auto;
       padding: 0 20px;
     }
+  }
+}
+
+@include respond-to($sm) {
+  .section-question {
+    text-align: center;
+    .right-content{
+      padding-left: 0;
+      padding-right: 0;
+    }
     .question-list {
+      background-color: #fff;
       padding-bottom: 0;
+      padding-left: 0;
+      border-radius: 0;
       &:after,
       &:before {
         display: none;
       }
+
       .bg-icon {
         display: block;
       }
+    }
+    .icons-block{
+      display: none;
+    }
+    .swiper-wrapper{
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+    .heading{
+      padding-left: 0;
+    }
+    .section__title{
+      margin: 0 auto 30px;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-question {
+    .question-list{
+      padding-top: 20px;
+    }
+    .question-list__item{
+      padding-bottom: 20px;
+    }
+    .bg-icon{
+      min-height: 60px;
+      padding-top: 0;
     }
   }
 }
