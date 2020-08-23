@@ -1440,7 +1440,11 @@ body {
   .section-about .block-preserve {
     position: static;
     height: auto;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
+  }
+
+  .section-indication .title {
+    text-align: center;
   }
 
   .section-indication .block-bg {
@@ -1480,6 +1484,15 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
+  }
+
+  .section-question .question-list {
+    box-shadow: none;
+  }
+
+  .section-question .question-list:after,
+  .section-question .question-list:before {
+    display: none;
   }
 
   .section-buy {
@@ -1602,9 +1615,25 @@ body {
     text-align: center;
   }
 
+  .section-question .question-list-wrap {
+    position: relative;
+  }
+
+  .section-question .question-list-wrap:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -50vw;
+    right: -50vw;
+    background-color: #fff;
+    display: block;
+    box-shadow: 0 0 42px rgba(40, 161, 222, 0.2);
+    z-index: 1;
+  }
+
   .section-question .question-list {
     position: relative;
-    background-color: #fff;
     padding: 20px 0;
     border-radius: 0;
   }
@@ -1657,6 +1686,10 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+  .wrapper {
+    padding-bottom: 10vh;
+  }
+
   .container {
     max-width: 540px;
   }
@@ -1924,10 +1957,6 @@ body {
 
   .section-indication .section__sub-title {
     margin-bottom: 40px;
-  }
-
-  .section-indication .title {
-    text-align: center;
   }
 
   .section-indication .how-apply-card {

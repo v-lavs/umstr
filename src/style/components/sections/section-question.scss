@@ -149,16 +149,37 @@
       margin-right: auto;
       padding: 0 20px;
     }
+
+    .question-list {
+      box-shadow: none;
+      &:after,
+      &:before {
+        display: none;
+      }
+    }
   }
 }
 
 @include respond-to($sm) {
   .section-question {
     text-align: center;
-
+    .question-list-wrap {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -50vw;
+        right: -50vw;
+        background-color: #fff;
+        display: block;
+        box-shadow: 0 0 42px rgba(40, 161, 222, 0.2);
+        z-index: 1;
+      }
+    }
     .question-list {
       position: relative;
-      background-color: #fff;
       padding: 20px 0;
       border-radius: 0;
       &:after,

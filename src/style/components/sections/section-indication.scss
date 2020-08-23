@@ -153,6 +153,9 @@
 
 @include respond-to($md) {
   .section-indication {
+    .title {
+      text-align: center;
+    }
     .block-bg {
       width: 100%;
       position: static;
@@ -222,10 +225,6 @@
     padding-bottom: 18px;
     .section__sub-title {
       margin-bottom: 40px;
-    }
-
-    .title {
-      text-align: center;
     }
     .how-apply-card{
       width: 45%;
