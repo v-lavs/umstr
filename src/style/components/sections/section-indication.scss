@@ -179,6 +179,14 @@
 
 @include respond-to($sm) {
   .section-indication {
+    .block-bg{
+      max-width: 660px;
+    }
+    .indications {
+      max-width: 660px;
+      width: 100%;
+      margin: 0 auto;
+    }
     .indications__item {
       padding-bottom: 15px;
 

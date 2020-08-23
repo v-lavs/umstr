@@ -157,7 +157,23 @@
       display: none;
     }
 
-    .bg-slider-advantages {
+    .swiper-button-next {
+      right: -20px;
+      margin-right: 15px;
+    }
+
+    .swiper-button-prev {
+      left: -20px;
+      margin-left: 15px;
+    }
+
+    .swiper-button-next:before,
+    .swiper-button-prev:before {
+      background-image: url(../assets/img/swiper-arrow-white.png);
+      margin-left: 4px;
+    }
+
+       .bg-slider-advantages {
       position: relative;
       padding: 30px 25px;
 

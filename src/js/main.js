@@ -75,8 +75,8 @@ $(document).ready(function () {
                         clickable: true,
                     },
                     navigation: {
-                        nextEl: '#advantagesSlider .swiper-button-next',
-                        prevEl: '#advantagesSlider .swiper-button-prev',
+                        nextEl: '.bg-slider-advantages .swiper-button-next',
+                        prevEl: '.bg-slider-advantages .swiper-button-prev',
                     },
                 });
             }
@@ -85,17 +85,13 @@ $(document).ready(function () {
                     slidesPerView: 1,
                     spaceBetween: 10,
                     breakpoints: {
-                        767: {
+                        768: {
                             slidesPerView: 2,
                         },
                     },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
                     navigation: {
-                        nextEl: '#gymnasticSlider .swiper-button-next',
-                        prevEl: '#gymnasticSlider .swiper-button-prev',
+                        nextEl: '.navigation-gymnastic-list .swiper-button-next',
+                        prevEl: '.navigation-gymnastic-list .swiper-button-prev',
                     },
                 });
             }
@@ -103,17 +99,13 @@ $(document).ready(function () {
                 questionsSlider = new Swiper('#questionsSlider', {
                     slidesPerView: 1,
                     breakpoints: {
-                        767: {
+                        768: {
                             slidesPerView: 2,
                         },
                     },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
                     navigation: {
-                        nextEl: '#questionsSlider .swiper-button-next',
-                        prevEl: '#questionsSlider .swiper-button-prev',
+                        nextEl: '.navigation-questions-slider .swiper-button-next',
+                        prevEl: '.navigation-questions-slider .swiper-button-prev',
                     },
                 });
             }

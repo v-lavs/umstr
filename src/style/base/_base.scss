@@ -157,7 +157,7 @@ body {
 
 @include respond-to($xs) {
   .wrapper {
-    padding-bottom: 10vh;
+    padding-bottom: 1vh;
   }
 }
 

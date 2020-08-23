@@ -192,10 +192,21 @@
 
 @include respond-to($sm) {
   .section-gymnastic {
+    .navigation-gymnastic-list {
+      position: relative;
+    }
 
     .swiper-wrapper {
       flex-wrap: nowrap;
       justify-content: flex-start;
+    }
+
+    .swiper-button-next {
+      right: -13px;
+    }
+
+    .swiper-button-prev {
+      left: -13px;
     }
   }
 }
@@ -215,8 +226,11 @@
 
 @include respond-to($xxs) {
   .section-gymnastic {
-    .link-upload{}
+    .link-upload {
+    }
+
     font-size: 15px;
+
     .link-upload .wrap-img {
       width: 65px;
       height: 65px;
@@ -224,5 +238,19 @@
       margin-bottom: 8px;
     }
 
+    .swiper-button-next {
+      right: -5px;
+    }
+
+    .swiper-button-prev {
+      left: -5px;
+    }
   }
+}
+
+@media only screen and (max-width: 380px) {
+.section-gymnastic{
+
+
+}
 }

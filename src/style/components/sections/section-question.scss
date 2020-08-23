@@ -202,6 +202,15 @@
       flex-wrap: nowrap;
       justify-content: flex-start;
     }
+    .swiper-button-next{
+      right: -30px;
+      margin-right: 15px;
+    }
+
+    .swiper-button-prev{
+      left: -30px;
+      margin-left: 15px;
+    }
     .heading{
       padding-left: 0;
     }
