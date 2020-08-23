@@ -132,9 +132,11 @@
   }
 }
 
-@include respond-to($sm) {
+@include respond-to($xs) {
   .section-buy {
-    padding-bottom: 30px;
+    padding-bottom: 100px;
+    max-width: 480px;
+    margin: auto;
 
     .product-block {
       display: none;
@@ -157,43 +159,36 @@
         display: none;
       }
     }
-
-    .resource-list__item {
-      &:before {
-        content: '';
-        position: relative;
-        display: block;
-        width: 50px;
-        height: 60px;
-        margin: 0 auto 10px;
-        background: url('../assets/img/marker-location.png') no-repeat center center;
-        -webkit-background-size: contain;
-        background-size: contain;
-      }
-
-      &:first-child,
-      &:last-child {
-        transform: translateY(-74px);
-      }
-    }
-  }
-}
-
-@include respond-to($xs) {
-  .section-buy {
-    padding-bottom: 100px;
-
     .resource-list {
       bottom: 20%;
-    }
+      &__item {
+        width: 33.33%;
+        padding-left: 0;
+        padding-right: 0;
+        &:before {
+          content: '';
+          position: relative;
+          display: block;
+          width: 50px;
+          height: 60px;
+          margin: 0 auto 10px;
+          background: url('../assets/img/marker-location.png') no-repeat center center;
+          -webkit-background-size: contain;
+          background-size: contain;
+        }
 
-    .resource-list__item {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-    .resource-list__item .btn {
-      font-size: 15px;
+        &:first-child,
+        &:last-child {
+          transform: translateY(-74px);
+        }
+        .btn {
+          max-width: 115px;
+          width: 100%;
+          font-size: 14px;
+          border-width: 1px;
+          padding-bottom: 5px;
+        }
+      }
     }
   }
 }
@@ -202,24 +197,23 @@
   .section-buy {
 
     .resource-list__item .btn {
-      min-width: 91px;
+      min-width: 0;
       width: 100%;
-      font-size: 10px;
     }
   }
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 360px) {
   .section-buy {
     padding-bottom: 120px;
     .resource-list {
       bottom: 25%;
     }
 
-    .resource-list__item {
-      width: 33.3%;
-      padding-left: 5px;
+    .resource-list__item .btn {
+      font-size: 13px;
       padding-right: 5px;
+      padding-left: 5px;
     }
   }
 }

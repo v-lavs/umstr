@@ -80,11 +80,11 @@
 
   .advantages-card__wrap-icon {
     width: 100%;
-    min-height: 86px;
+    height: 86px;
     background-repeat: no-repeat;
     background-position: center center;
-    -webkit-background-size: 86px;
-    background-size: 86px;
+    -webkit-background-size: auto 98%;
+    background-size: auto 98%;
     margin-bottom: 35px;
   }
 
@@ -115,9 +115,7 @@
     }
 
     .advantages-card__wrap-icon {
-      min-height: 78px;
-      -webkit-background-size: 68px;
-      background-size: 68px;
+      height: 73px;
     }
   }
 }
@@ -142,8 +140,7 @@
     }
 
     .advantages-card__wrap-icon {
-      -webkit-background-size: 75px;
-      background-size: 75px;
+      height: 68px;
     }
 
     .block-preserve {
@@ -161,10 +158,20 @@
     }
 
     .bg-slider-advantages {
-      background-image: linear-gradient(to right bottom, #00e0ff, #009dff);
-      margin-left: -20px;
-      margin-right: -20px;
-      padding: 30px 20%;
+      position: relative;
+      padding: 30px 25px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -50vw;
+        left: -50vw;
+        display: block;
+        background-image: linear-gradient(to right bottom, #00e0ff, #009dff);
+        z-index: 1;
+      }
     }
 
     .swiper-wrapper {
@@ -175,35 +182,57 @@
   }
 }
 
-@include respond-to($xxs) {
+@include respond-to($xs) {
   .section-about {
     text-align: center;
+
+    .bg-slider-advantages {
+      max-width: 340px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .section__sub-title {
       margin-bottom: 20px;
     }
-    .block-preserve{
+
+    .swiper-container {
+      max-width: 235px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .block-preserve {
       margin-bottom: 24px;
     }
-    .block-preserve p{
-      font-size: 13px;
+
+    .block-preserve p {
+      font-size: 12px;
       color: #9d9d9c;
     }
+
     .wrap-img {
       margin-bottom: 5px;
     }
-    .advantages-card{
-      padding-bottom: 0;
-    }
-    .advantages-card__title{
+
+    .advantages-card__title {
       font-size: 20px;
       margin-bottom: 10px;
     }
-    .advantages-card__wrap-icon{
+
+    .advantages-card {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .advantages-card__wrap-icon {
       margin-bottom: 24px;
     }
-    .advantages-card__body p{
+
+    .advantages-card__body p {
       font-size: 16px;
       line-height: 0.9;
+      margin-bottom: 0;
     }
   }
 }

@@ -150,7 +150,9 @@ body {
 }
 
 @include respond-to($sm) {
-
+.section__title {
+  font-size: 40px;
+}
 }
 
 @include respond-to($xxs) {

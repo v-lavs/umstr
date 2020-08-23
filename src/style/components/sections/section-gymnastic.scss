@@ -192,9 +192,23 @@
 
 @include respond-to($sm) {
   .section-gymnastic {
+
     .swiper-wrapper {
       flex-wrap: nowrap;
       justify-content: flex-start;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-gymnastic {
+    .wrap-gymnastic-list .container {
+      position: relative;
+      max-width: 340px;
+      padding-left: 26px;
+      padding-right: 25px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

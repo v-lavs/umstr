@@ -139,5 +139,12 @@
     .logo {
       max-width: 70px;
     }
+    .burger{
+      width: 20px;
+      .line{
+        height: 3px;
+        margin-bottom: 3px;
+      }
+    }
    }
 }

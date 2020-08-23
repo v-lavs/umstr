@@ -155,18 +155,19 @@
 @include respond-to($sm) {
   .section-question {
     text-align: center;
-    .right-content{
-      padding-left: 0;
-      padding-right: 0;
-    }
+
     .question-list {
+      position: relative;
       background-color: #fff;
-      padding-bottom: 0;
-      padding-left: 0;
+      padding: 20px 0;
       border-radius: 0;
       &:after,
       &:before {
         display: none;
+      }
+
+      &__item {
+        padding-bottom: 0;
       }
 
       .bg-icon {
@@ -189,14 +190,20 @@
   }
 }
 
+@include respond-to($xs) {
+  .section-question {
+    .right-content{
+      max-width: 340px;
+      padding-left: 26px;
+      padding-right: 25px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
 @include respond-to($xxs) {
   .section-question {
-    .question-list{
-      padding-top: 20px;
-    }
-    .question-list__item{
-      padding-bottom: 20px;
-    }
     .bg-icon{
       min-height: 60px;
       padding-top: 0;
