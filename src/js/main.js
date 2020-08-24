@@ -104,8 +104,8 @@ $(document).ready(function () {
                         },
                     },
                     navigation: {
-                        nextEl: '.navigation-questions-slider .swiper-button-next',
-                        prevEl: '.navigation-questions-slider .swiper-button-prev',
+                        nextEl: '.question-list-wrap .swiper-button-next',
+                        prevEl: '.question-list-wrap .swiper-button-prev',
                     },
                 });
             }
