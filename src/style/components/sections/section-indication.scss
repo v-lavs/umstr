@@ -156,6 +156,7 @@
     .title {
       text-align: center;
     }
+
     .block-bg {
       width: 100%;
       position: static;
@@ -179,14 +180,27 @@
 
 @include respond-to($sm) {
   .section-indication {
-    .block-bg{
-      max-width: 660px;
+    .title {
+      line-height: 1;
+      margin-bottom: 26px;
     }
+
+    .block-bg {
+      max-width: 660px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
     .indications {
       max-width: 660px;
       width: 100%;
       margin: 0 auto;
     }
+
+    .content-block ul {
+      margin-bottom: 50px;
+    }
+
     .indications__item {
       padding-bottom: 15px;
 
@@ -211,9 +225,10 @@
 
 @include respond-to($xs) {
   .section-indication {
-    .how-apply {
+    .content-block .how-apply {
       justify-content: center;
       flex-wrap: wrap;
+      margin-bottom: 0;
     }
 
     .how-apply-card {
@@ -231,17 +246,21 @@
 @include respond-to($xxs) {
   .section-indication {
     padding-bottom: 18px;
+
     .section__sub-title {
       margin-bottom: 40px;
     }
-    .how-apply-card{
+
+    .how-apply-card {
       width: 45%;
       min-width: 140px;
     }
+
     .how-apply-card__wrap-icon:before {
       width: 53px;
       height: 53px;
     }
+
     .how-apply-card__wrap-icon {
       min-height: 78px;
       margin-top: 10px;

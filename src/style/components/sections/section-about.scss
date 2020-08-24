@@ -98,6 +98,11 @@
     width: 30%;
     height: auto;
   }
+  .read-more{
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
 }
 
 @include respond-to($screen-lg) {
@@ -153,6 +158,8 @@
 
 @include respond-to($sm) {
   .section-about {
+    text-align: center;
+
     .advantages:before {
       display: none;
     }
@@ -173,7 +180,7 @@
       margin-left: 4px;
     }
 
-       .bg-slider-advantages {
+    .bg-slider-advantages {
       position: relative;
       padding: 30px 25px;
 
@@ -201,11 +208,17 @@
 @include respond-to($xs) {
   .section-about {
     text-align: center;
+    padding-top: 60px;
 
     .bg-slider-advantages {
       max-width: 340px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .hide {
+      height: 70px;
+      overflow: hidden;
     }
 
     .section__sub-title {
@@ -250,5 +263,12 @@
       line-height: 0.9;
       margin-bottom: 0;
     }
+  }
+}
+@include respond-to($xxs) {
+  .section-about {
+.read-more{
+  display: inline-block;
+}
   }
 }

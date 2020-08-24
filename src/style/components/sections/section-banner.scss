@@ -131,6 +131,10 @@
 
 @include respond-to($sm) {
   .section-banner {
+    .slogan span {
+      font-size: 24px;
+    }
+
     .link-banner .wrap-icon {
       width: 50px;
       height: 50px;
@@ -142,6 +146,8 @@
 
 @include respond-to($xs) {
   .section-banner {
+    padding-top: 90px;
+
     .top-content {
       position: relative;
       border-radius: 15px 15px 0 0;
@@ -187,6 +193,7 @@
         width: 50%;
       }
     }
+
     .banner-part {
       width: 100%;
       justify-content: center;
@@ -202,17 +209,31 @@
         z-index: 1;
       }
     }
+
     .slogan {
       margin-bottom: 0;
     }
   }
 }
+
 @include respond-to($xxs) {
   .section-banner {
-    .bottom-content .link-banner{
+    .bottom-content .link-banner {
       font-size: 20px;
+      padding-top: 13px;
+      padding-bottom: 13px;
     }
-    .slogan span{
+
+    .banner-part {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    .slogan {
+      font-size: 3.35rem;
+    }
+
+    .slogan span {
       font-size: 25px;
     }
   }

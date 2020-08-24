@@ -317,6 +317,15 @@ body {
   background-color: transparent;
 }
 
+.read-more {
+  font-size: 16px;
+  font-weight: 600;
+  color: #28a1de;
+  box-shadow: 0 0 10px rgba(40, 161, 222, 0.21);
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   display: none;
@@ -498,6 +507,12 @@ body {
 .section-about .swiper-slide {
   width: 30%;
   height: auto;
+}
+
+.section-about .read-more {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .section-indication .container {
@@ -1613,8 +1628,8 @@ body {
     position: absolute;
     content: '';
     display: block;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background-color: #ffffff;
     left: 50%;
@@ -1631,11 +1646,19 @@ body {
     background-color: transparent;
   }
 
+  .section-banner .slogan span {
+    font-size: 24px;
+  }
+
   .section-banner .link-banner .wrap-icon {
     width: 50px;
     height: 50px;
     min-height: 0;
     margin-right: 10px;
+  }
+
+  .section-about {
+    text-align: center;
   }
 
   .section-about .advantages:before {
@@ -1681,14 +1704,25 @@ body {
     padding: 0;
   }
 
+  .section-indication .title {
+    line-height: 1;
+    margin-bottom: 26px;
+  }
+
   .section-indication .block-bg {
     max-width: 660px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .section-indication .indications {
     max-width: 660px;
     width: 100%;
     margin: 0 auto;
+  }
+
+  .section-indication .content-block ul {
+    margin-bottom: 50px;
   }
 
   .section-indication .indications__item {
@@ -1713,6 +1747,14 @@ body {
 
   .section-gymnastic .navigation-gymnastic-list {
     position: relative;
+  }
+
+  .section-gymnastic .wrap-gymnastic-list:before {
+    display: none;
+  }
+
+  .section-gymnastic .section__sub-title {
+    margin-bottom: 0;
   }
 
   .section-gymnastic .swiper-wrapper {
@@ -1795,6 +1837,15 @@ body {
     margin: 0 auto 30px;
   }
 
+  .section-question .question {
+    font-size: 17px;
+  }
+
+  .section-question .answer {
+    font-weight: 400;
+    line-height: 1.17;
+  }
+
   .footer .top-row {
     padding-bottom: 17vh;
   }
@@ -1819,6 +1870,10 @@ body {
 
   .container {
     max-width: 540px;
+  }
+
+  .section-banner {
+    padding-top: 90px;
   }
 
   .section-banner .top-content {
@@ -1889,12 +1944,18 @@ body {
 
   .section-about {
     text-align: center;
+    padding-top: 60px;
   }
 
   .section-about .bg-slider-advantages {
     max-width: 340px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .section-about .hide {
+    height: 70px;
+    overflow: hidden;
   }
 
   .section-about .section__sub-title {
@@ -1940,9 +2001,10 @@ body {
     margin-bottom: 0;
   }
 
-  .section-indication .how-apply {
+  .section-indication .content-block .how-apply {
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 0;
   }
 
   .section-indication .how-apply-card {
@@ -2072,10 +2134,25 @@ body {
 
   .section-banner .bottom-content .link-banner {
     font-size: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  .section-banner .banner-part {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .section-banner .slogan {
+    font-size: 3.35rem;
   }
 
   .section-banner .slogan span {
     font-size: 25px;
+  }
+
+  .section-about .read-more {
+    display: inline-block;
   }
 
   .section-indication {

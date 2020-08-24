@@ -196,6 +196,14 @@
       position: relative;
     }
 
+    .wrap-gymnastic-list:before {
+      display: none;
+    }
+
+    .section__sub-title {
+      margin-bottom: 0;
+    }
+
     .swiper-wrapper {
       flex-wrap: nowrap;
       justify-content: flex-start;
@@ -249,8 +257,8 @@
 }
 
 @media only screen and (max-width: 380px) {
-.section-gymnastic{
+  .section-gymnastic {
 
 
-}
+  }
 }

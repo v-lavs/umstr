@@ -153,6 +153,13 @@ $(document).ready(function () {
     });
 
 
+//HIDE TEXT
+    $('.text-hide .read-more').on('click', function(e) {
+        e.preventDefault();
+        $(this).siblings().removeClass('hide');
+        $(this).hide();
+    });
+
 
     $(window).on('resize', function () {
         slidersInit();
