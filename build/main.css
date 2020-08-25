@@ -235,7 +235,7 @@ body {
 .main-nav .menu__item .sub-menu {
   position: absolute;
   display: none;
-  min-width: 280px;
+  min-width: 220px;
   background-color: #ffffff;
   top: 100%;
   margin-left: -35px;
