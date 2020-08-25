@@ -142,9 +142,9 @@ $(document).ready(function () {
 
 //SUB-MENU
 
-    // $('.sub-menu__toggle').click(function (e) {
-    //     $(this).toggleClass('sub-menu__toggle_active')
-    // });
+    $('.sub-menu__toggle').click(function (e) {
+        $(this).toggleClass('sub-menu__toggle_active')
+    });
 
 //HIDE TEXT
     $('.text-hide .read-more').on('click', function(e) {

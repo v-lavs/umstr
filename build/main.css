@@ -202,6 +202,7 @@ body {
 }
 
 .main-nav .menu__item {
+  position: relative;
   color: #000000;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
@@ -1483,19 +1484,52 @@ body {
     font-size: 21px;
   }
 
-  .main-nav .menu__item .sub-menu {
-    display: inline-block !important;
-    position: static !important;
-    box-shadow: none;
+  .main-nav .menu__item .sub-menu__toggle {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    background-color: #28a1de;
+    border: none;
   }
 
-  .main-nav .menu__item .sub-menu__item {
-    font-size: 18px;
-    padding-bottom: 0;
-    padding-left: 0;
+  .main-nav .menu__item .sub-menu__toggle:before {
+    content: '';
+    height: 3px;
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 1;
   }
 
-  .main-nav .dropdown:before {
+  .main-nav .menu__item .sub-menu__toggle:after {
+    content: '';
+    width: 3px;
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 1;
+  }
+
+  .main-nav .menu__item .sub-menu__toggle_active:after {
     display: none;
   }
 
@@ -1506,6 +1540,40 @@ body {
   .main-nav .menu {
     flex-direction: column;
     padding: 40px 20px;
+    width: 100%;
+  }
+
+  .main-nav .menu__item:hover > .sub-menu {
+    display: none;
+  }
+
+  .main-nav .menu .menu__link:before {
+    display: none !important;
+  }
+
+  .main-nav .menu .sub-menu {
+    position: relative;
+    top: 0;
+    min-width: auto;
+    width: 100%;
+    box-shadow: none;
+    display: none;
+  }
+
+  .main-nav .menu .sub-menu__item {
+    padding-top: 15px;
+    padding-bottom: 0;
+    padding-left: 45px;
+    padding-right: 0;
+    font-size: 16px;
+  }
+
+  .main-nav .menu .sub-menu__toggle {
+    display: block;
+  }
+
+  .main-nav .menu .sub-menu__toggle_active + .sub-menu {
+    display: block !important;
   }
 
   .main-nav .lang-switch {
