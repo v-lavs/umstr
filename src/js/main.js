@@ -140,18 +140,11 @@ $(document).ready(function () {
 
     setEqualHeight();
 
-    // PAIN SYMPTOMS Hover block
+//SUB-MENU
 
-    var $imagesList = $('#pain-syndrom-imgs .link-syndrom');
-    var $syndromsItems = $('.pain-syndrome-list__item');
-
-    $imagesList.hover(function () {
-        $syndromsItems.removeClass('active-syndrom');
-        $imagesList.removeClass('active');
-        $(this).addClass('active');
-        $('[data-id=' + $(this).data('for') + ']').addClass('active-syndrom');
-    });
-
+    // $('.sub-menu__toggle').click(function (e) {
+    //     $(this).toggleClass('sub-menu__toggle_active')
+    // });
 
 //HIDE TEXT
     $('.text-hide .read-more').on('click', function(e) {

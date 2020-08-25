@@ -206,14 +206,14 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   line-height: 1;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .main-nav .menu__item a {
   display: inline-block;
   color: inherit;
-  padding: 6px 10px;
+  padding: 6px 15px;
   border: 1px solid transparent;
   border-radius: 5px;
   -webkit-transition: .35s;
@@ -226,6 +226,76 @@ body {
 .main-nav .menu__item a:hover {
   border-color: #28a1de;
   color: #28a1de;
+}
+
+.main-nav .menu__item a.dropdown {
+  padding-right: 25px;
+}
+
+.main-nav .menu__item .sub-menu {
+  position: absolute;
+  display: none;
+  min-width: 280px;
+  background-color: #ffffff;
+  top: 100%;
+  margin-left: -35px;
+  padding: 10px;
+  z-index: 2;
+  box-shadow: 0 5px 7px rgba(40, 161, 222, 0.1);
+  border-radius: 6px;
+}
+
+.main-nav .menu__item .sub-menu__item {
+  padding: 5px 10px;
+  margin: 0;
+}
+
+.main-nav .menu__item .sub-menu__link {
+  display: block;
+  transition: color .35s;
+}
+
+.main-nav .menu__item .sub-menu__link:hover,
+.main-nav .menu__item .sub-menu__link:focus {
+  color: #28a1de;
+  border-color: transparent;
+}
+
+.main-nav .menu__item:hover > .sub-menu {
+  display: block;
+}
+
+.main-nav .menu__item:hover .dropdown:hover:before {
+  border-right: 1px solid #28a1de;
+  border-bottom: 1px solid #28a1de;
+}
+
+.main-nav .dropdown {
+  position: relative;
+}
+
+.main-nav .dropdown:before {
+  position: absolute;
+  display: block;
+  content: '';
+  right: 10px;
+  bottom: 11px;
+  width: 7px;
+  height: 7px;
+  pointer-events: none;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+.main-nav .dropdown > .menu__link {
+  padding-right: 35px;
+}
+
+.main-nav .dropdown .dropdown:hover:before {
+  border-right: 1px solid #28a1de;
+  border-bottom: 1px solid #28a1de;
 }
 
 .main-nav .btn-close {
@@ -1335,8 +1405,13 @@ body {
 
   .main-nav .menu__item {
     font-size: 13px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .main-nav .menu__item a {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .section-about .advantages-card__title {
@@ -1406,6 +1481,22 @@ body {
   .main-nav .menu__item {
     margin: 0 0 15px 0;
     font-size: 21px;
+  }
+
+  .main-nav .menu__item .sub-menu {
+    display: inline-block !important;
+    position: static !important;
+    box-shadow: none;
+  }
+
+  .main-nav .menu__item .sub-menu__item {
+    font-size: 18px;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  .main-nav .dropdown:before {
+    display: none;
   }
 
   .main-nav.open {
