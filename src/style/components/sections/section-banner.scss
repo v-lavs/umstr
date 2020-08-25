@@ -23,7 +23,7 @@
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
-    background-position: top center;
+    background-position: 0 center;
   }
 
   .slogan {
@@ -64,11 +64,17 @@
       min-height: 102px;
       border-radius: 8px;
       border: 1px solid #28a1de;
-      background-repeat: no-repeat;
-      background-position: center center;
-      -webkit-background-size: 50%;
-      background-size: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       overflow: hidden;
+      padding: 18px;
+
+      svg {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+      }
     }
   }
 }
@@ -122,6 +128,11 @@
       }
     }
 
+    .link-banner {
+      font-size: 13px;
+      text-align: center;
+    }
+
     .link-banner .wrap-icon {
       width: 80px;
       min-height: 88px;
@@ -135,11 +146,17 @@
       font-size: 24px;
     }
 
+    .link-banner {
+      font-size: 8px;
+      margin-right: 0;
+    }
+
     .link-banner .wrap-icon {
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       min-height: 0;
-      margin-right: 10px;
+      padding: 10px;
+      margin-bottom: 5px;
     }
   }
 }
@@ -164,10 +181,19 @@
       overflow: hidden;
 
       .wrap-icon {
-        width: 25px;
+        width: 20px;
         height: 25px;
-        min-height: 0;
+        background-color: transparent;
+        border: none;
         margin-right: 10px;
+        margin-bottom: 0;
+        padding: 0;
+        min-height: 0;
+        border-radius: 0;
+        .st0 {
+          fill: #ffffff;
+          stroke: #ffffff;
+        }
       }
 
       .link-banner {
@@ -196,7 +222,7 @@
 
     .banner-part {
       width: 100%;
-      justify-content: center;
+      justify-content: center!important;
       min-height: 600px;
 
       &:first-child {
@@ -227,6 +253,14 @@
     .banner-part {
       padding-left: 25px;
       padding-right: 25px;
+      justify-content: center;
+    }
+
+    .bottom-content .wrap-icon  {
+      width: 14px;
+      height: 20px;
+      margin-right: 5px;
+      padding: 0;
     }
 
     .slogan {

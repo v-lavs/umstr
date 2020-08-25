@@ -12,7 +12,7 @@
       position: absolute;
       content: '';
       display: block;
-      background-image: url(../assets/img/arrow.png);
+      background-image: url(../assets/img/arrow1.svg);
       background-repeat: no-repeat;
       background-position: 0 0;
       -webkit-background-size: contain;
@@ -31,13 +31,16 @@
     top: -5%;
     bottom: 0;
     left: 100%;
-    overflow: hidden;
     z-index: 5;
+
+    .wrap-img {
+      max-width: 680px;
+      margin-left: auto;
+    }
 
     .img {
       position: relative;
       display: block;
-      transform: translate(15%);
     }
   }
 
@@ -125,12 +128,24 @@
 
 @include respond-to($screen-lg) {
   .section-indication {
+    padding-bottom: 100px;
+
     .content-block {
       &:after {
         width: 65px;
         height: 190px;
         top: 40%;
       }
+    }
+
+    .how-apply {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      max-width: 400px;
+    }
+
+    .how-apply-card {
+      margin-bottom: 14px;
     }
   }
 }
@@ -157,10 +172,23 @@
       text-align: center;
     }
 
+    .how-apply {
+      max-width: 700px;
+      margin: 0 auto;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+
     .block-bg {
       width: 100%;
       position: static;
       height: auto;
+      margin-bottom: 50px;
+    }
+
+    .wrap-img {
+      max-width: 600px;
+      margin-right: auto;
     }
 
     .content-block {
@@ -170,10 +198,6 @@
       &:after {
         display: none;
       }
-    }
-
-    .block-bg .img {
-      transform: translate(0%);
     }
   }
 }

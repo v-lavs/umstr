@@ -90,6 +90,7 @@
 
 @include respond-to($screen-md) {
   .section-buy {
+
     .resource-list__item {
       width: 30%;
       padding-left: 20px;
@@ -134,7 +135,7 @@
 
 @include respond-to($xs) {
   .section-buy {
-    padding-bottom: 100px;
+    padding-bottom: 0;
     max-width: 480px;
     margin: auto;
 
@@ -159,12 +160,15 @@
         display: none;
       }
     }
+
     .resource-list {
-      bottom: 20%;
+      bottom: 4%;
+
       &__item {
         width: 33.33%;
         padding-left: 0;
         padding-right: 0;
+
         &:before {
           content: '';
           position: relative;
@@ -181,6 +185,7 @@
         &:last-child {
           transform: translateY(-74px);
         }
+
         .btn {
           max-width: 115px;
           width: 100%;
@@ -205,9 +210,8 @@
 
 @media only screen and (max-width: 360px) {
   .section-buy {
-    padding-bottom: 120px;
     .resource-list {
-      bottom: 25%;
+      bottom: 2%;
     }
 
     .resource-list__item .btn {

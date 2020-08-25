@@ -150,6 +150,9 @@ body {
 }
 
 @include respond-to($sm) {
+  body {
+    background-image: linear-gradient(to right, #c5f7ff, #ffffff 20%, #ffffff 80%, #c5f7ff);
+  }
   .section__title {
     font-size: 40px;
   }
@@ -157,7 +160,7 @@ body {
 
 @include respond-to($xs) {
   .wrapper {
-    padding-bottom: 1vh;
+    padding-bottom: 16vh;
   }
 }
 

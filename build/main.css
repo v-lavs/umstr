@@ -360,7 +360,7 @@ body {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  background-position: top center;
+  background-position: 0 center;
 }
 
 .section-banner .slogan {
@@ -402,11 +402,17 @@ body {
   min-height: 102px;
   border-radius: 8px;
   border: 1px solid #28a1de;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: 50%;
-  background-size: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  padding: 18px;
+}
+
+.section-banner .link-banner .wrap-icon svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 .section-about .container {
@@ -477,7 +483,7 @@ body {
   color: #5a5a5a;
   border: 4px solid #ffffff;
   background-color: #fbfbfb;
-  padding: 20px 15px 40px;
+  padding: 20px 15px 30px;
   text-align: center;
 }
 
@@ -489,13 +495,13 @@ body {
 }
 
 .section-about .advantages-card__wrap-icon {
-  width: 100%;
   height: 86px;
+  width: 40%;
   background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: auto 98%;
-  background-size: auto 98%;
-  margin-bottom: 35px;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin: 0 auto 15px;
 }
 
 .section-about .swiper-wrapper {
@@ -529,7 +535,7 @@ body {
   position: absolute;
   content: '';
   display: block;
-  background-image: url(../assets/img/arrow.png);
+  background-image: url(../assets/img/arrow1.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
   -webkit-background-size: contain;
@@ -547,14 +553,17 @@ body {
   top: -5%;
   bottom: 0;
   left: 100%;
-  overflow: hidden;
   z-index: 5;
+}
+
+.section-indication .block-bg .wrap-img {
+  max-width: 680px;
+  margin-left: auto;
 }
 
 .section-indication .block-bg .img {
   position: relative;
   display: block;
-  transform: translate(15%);
 }
 
 .section-indication .title {
@@ -778,7 +787,6 @@ body {
   display: block;
   width: 73px;
   height: 73px;
-  padding: 18px;
   border: 2px solid #00adff;
   border-radius: 50%;
   background-color: #ffffff;
@@ -820,7 +828,7 @@ body {
 }
 
 .section-question .right-content {
-  width: 70.5%;
+  width: 65.5%;
   margin-left: auto;
 }
 
@@ -831,18 +839,19 @@ body {
 }
 
 .section-question .bg-icon {
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size: inherit;
-  background-size: inherit;
-  min-height: 80px;
+  height: 70px;
   padding-top: 16px;
-  max-width: 20%;
+  max-width: 13%;
+  margin: 0 auto 12px;
+}
+
+.section-question .bg-icon .img-question-slide {
+  width: auto;
+  height: 100%;
   margin: 0 auto;
 }
 
 .section-question .heading {
-  padding-left: 68px;
   align-items: baseline;
 }
 
@@ -857,43 +866,53 @@ body {
   padding-left: 5%;
 }
 
+.section-question .icons-block .img-guestion {
+  width: 100%;
+  height: auto;
+  max-width: 48px;
+}
+
 .section-question .icons-block__item {
   margin: 0 5%;
   filter: grayscale(100%);
+  opacity: .5;
 }
 
 .section-question .icons-block__item:last-child {
   margin-right: 0;
 }
 
-.section-question .question-list {
+.section-question .question-list-wrap {
   position: relative;
-  flex-wrap: wrap;
-  padding: 50px 0 55px 10px;
   border-radius: 50px 0 0 50px;
-  border-right: 0;
-  max-width: 1180px;
-  box-shadow: 0 0 42px rgba(40, 161, 222, 0.2);
 }
 
-.section-question .question-list:after,
-.section-question .question-list:before {
+.section-question .question-list-wrap:after,
+.section-question .question-list-wrap:before {
   content: '';
   position: absolute;
   top: 0;
   width: 100vw;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0;
   margin: -1px;
   border-radius: inherit;
   background: linear-gradient(to right, #00d2ff, #3a7bd5);
+  box-shadow: 0 0 42px rgba(40, 161, 222, 0.1);
 }
 
-.section-question .question-list:after {
+.section-question .question-list-wrap:after {
   background-clip: padding-box;
   border: 2px solid transparent;
   background-image: linear-gradient(to right, #ffffff 85%, #c5f7ff);
+}
+
+.section-question .question-list {
+  flex-wrap: wrap;
+  padding: 50px 0 55px 10px;
+  border-radius: 50px 0 0 50px;
+  border-right: 0;
 }
 
 .section-question .question-list__item {
@@ -905,11 +924,27 @@ body {
 }
 
 .section-question .question {
+  position: relative;
   font-size: 20px;
   font-weight: 600;
   line-height: 1;
   color: #000000;
   margin-bottom: 16px;
+}
+
+.section-question .question:before {
+  position: absolute;
+  content: '';
+  background-image: url(../assets/img/marker.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  display: block;
+  width: 14px;
+  height: 14px;
+  left: -32px;
+  top: 03px;
 }
 
 .section-question .answer {
@@ -923,6 +958,10 @@ body {
   position: relative;
   flex-wrap: wrap;
   z-index: 2;
+}
+
+.section-question .swiper-container {
+  margin-left: 0;
 }
 
 .section-question .swiper-container-initialized .swiper-wrapper {
@@ -1228,10 +1267,32 @@ body {
     font-size: 24px;
   }
 
+  .section-about .advantages-card__wrap-icon {
+    width: 60%;
+  }
+
+  .section-indication {
+    padding-bottom: 100px;
+  }
+
   .section-indication .content-block:after {
     width: 65px;
     height: 190px;
     top: 40%;
+  }
+
+  .section-indication .how-apply {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 400px;
+  }
+
+  .section-indication .how-apply-card {
+    margin-bottom: 14px;
+  }
+
+  .section-gymnastic {
+    padding-top: 50px;
   }
 
   .section-gymnastic .gymnastic-card {
@@ -1435,6 +1496,11 @@ body {
     display: none;
   }
 
+  .section-banner .link-banner {
+    font-size: 13px;
+    text-align: center;
+  }
+
   .section-banner .link-banner .wrap-icon {
     width: 80px;
     min-height: 88px;
@@ -1449,16 +1515,17 @@ body {
     width: 25%;
   }
 
+  .section-about .advantages-card__wrap-icon {
+    height: 68px;
+    width: 40%;
+  }
+
   .section-about .advantages-card__title {
     font-size: 25px;
   }
 
   .section-about .advantages:before {
     transform: translate(-150px, -50%);
-  }
-
-  .section-about .advantages-card__wrap-icon {
-    height: 68px;
   }
 
   .section-about .block-preserve {
@@ -1471,10 +1538,23 @@ body {
     text-align: center;
   }
 
+  .section-indication .how-apply {
+    max-width: 700px;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
   .section-indication .block-bg {
     width: 100%;
     position: static;
     height: auto;
+    margin-bottom: 50px;
+  }
+
+  .section-indication .wrap-img {
+    max-width: 600px;
+    margin-right: auto;
   }
 
   .section-indication .content-block {
@@ -1484,10 +1564,6 @@ body {
 
   .section-indication .content-block:after {
     display: none;
-  }
-
-  .section-indication .block-bg .img {
-    transform: translate(0%);
   }
 
   .section-gymnastic .section__title .corner:after {
@@ -1568,6 +1644,10 @@ body {
 }
 
 @media only screen and (max-width: 1040px) {
+  body {
+    background-image: linear-gradient(to right, #c5f7ff, #ffffff 20%, #ffffff 80%, #c5f7ff);
+  }
+
   .section__title {
     font-size: 40px;
   }
@@ -1650,15 +1730,26 @@ body {
     font-size: 24px;
   }
 
+  .section-banner .link-banner {
+    font-size: 8px;
+    margin-right: 0;
+  }
+
   .section-banner .link-banner .wrap-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     min-height: 0;
-    margin-right: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
   }
 
   .section-about {
     text-align: center;
+  }
+
+  .section-about .advantages-card__wrap-icon {
+    height: 78px;
+    width: 30%;
   }
 
   .section-about .advantages:before {
@@ -1776,19 +1867,20 @@ body {
 
   .section-question .question-list-wrap {
     position: relative;
+    border-radius: 0;
+    margin-left: auto;
   }
 
   .section-question .question-list-wrap:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -50vw;
-    right: -50vw;
+    left: -100vw;
+    background-image: none;
     background-color: #fff;
-    display: block;
-    box-shadow: 0 0 42px rgba(40, 161, 222, 0.2);
-    z-index: 1;
+    width: 200vw;
+    border: none;
+  }
+
+  .section-question .question-list-wrap:after {
+    display: none;
   }
 
   .section-question .question-list {
@@ -1797,21 +1889,22 @@ body {
     border-radius: 0;
   }
 
-  .section-question .question-list:after,
-  .section-question .question-list:before {
-    display: none;
-  }
-
   .section-question .question-list__item {
     padding-bottom: 0;
   }
 
   .section-question .question-list .bg-icon {
     display: block;
+    max-width: 23%;
+    padding-top: 0;
   }
 
   .section-question .icons-block {
     display: none;
+  }
+
+  .section-question .swiper-container {
+    margin-left: auto;
   }
 
   .section-question .swiper-wrapper {
@@ -1841,6 +1934,10 @@ body {
     font-size: 17px;
   }
 
+  .section-question .question:before {
+    display: none;
+  }
+
   .section-question .answer {
     font-weight: 400;
     line-height: 1.17;
@@ -1865,7 +1962,7 @@ body {
 
 @media only screen and (max-width: 767px) {
   .wrapper {
-    padding-bottom: 1vh;
+    padding-bottom: 16vh;
   }
 
   .container {
@@ -1893,10 +1990,20 @@ body {
   }
 
   .section-banner .bottom-content .wrap-icon {
-    width: 25px;
+    width: 20px;
     height: 25px;
-    min-height: 0;
+    background-color: transparent;
+    border: none;
     margin-right: 10px;
+    margin-bottom: 0;
+    padding: 0;
+    min-height: 0;
+    border-radius: 0;
+  }
+
+  .section-banner .bottom-content .wrap-icon .st0 {
+    fill: #ffffff;
+    stroke: #ffffff;
   }
 
   .section-banner .bottom-content .link-banner {
@@ -1924,7 +2031,7 @@ body {
 
   .section-banner .banner-part {
     width: 100%;
-    justify-content: center;
+    justify-content: center !important;
     min-height: 600px;
   }
 
@@ -1992,7 +2099,9 @@ body {
   }
 
   .section-about .advantages-card__wrap-icon {
-    margin-bottom: 24px;
+    height: 86px;
+    width: 40%;
+    margin-bottom: 10px;
   }
 
   .section-about .advantages-card__body p {
@@ -2034,8 +2143,13 @@ body {
     margin-right: auto;
   }
 
+  .section-question .bg-icon {
+    width: 23%;
+    margin-bottom: 10px;
+  }
+
   .section-buy {
-    padding-bottom: 100px;
+    padding-bottom: 0;
     max-width: 480px;
     margin: auto;
   }
@@ -2061,7 +2175,7 @@ body {
   }
 
   .section-buy .resource-list {
-    bottom: 20%;
+    bottom: 4%;
   }
 
   .section-buy .resource-list__item {
@@ -2115,6 +2229,11 @@ body {
   .footer .top-row {
     display: none;
   }
+
+  .footer .disclaimer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2141,6 +2260,14 @@ body {
   .section-banner .banner-part {
     padding-left: 25px;
     padding-right: 25px;
+    justify-content: center;
+  }
+
+  .section-banner .bottom-content .wrap-icon {
+    width: 14px;
+    height: 20px;
+    margin-right: 5px;
+    padding: 0;
   }
 
   .section-banner .slogan {
@@ -2202,7 +2329,7 @@ body {
   }
 
   .section-question .bg-icon {
-    min-height: 60px;
+    height: 60px;
     padding-top: 0;
   }
 
@@ -2226,12 +2353,8 @@ body {
 }
 
 @media only screen and (max-width: 360px) {
-  .section-buy {
-    padding-bottom: 120px;
-  }
-
   .section-buy .resource-list {
-    bottom: 25%;
+    bottom: 2%;
   }
 
   .section-buy .resource-list__item .btn {
